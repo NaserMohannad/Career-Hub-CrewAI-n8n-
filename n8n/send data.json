@@ -1,0 +1,586 @@
+{
+  "name": "send data",
+  "nodes": [
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1Jp_8faYjzbTgyCvBRTvC6pXM26lqsF5Tygo2dB-vEBM",
+          "mode": "list",
+          "cachedResultName": "job applycation form",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1Jp_8faYjzbTgyCvBRTvC6pXM26lqsF5Tygo2dB-vEBM/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1Jp_8faYjzbTgyCvBRTvC6pXM26lqsF5Tygo2dB-vEBM/edit#gid=0"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        208,
+        48
+      ],
+      "id": "1183f861-8edf-48fb-ac4e-59ee75814ce4",
+      "name": "Get row(s) in sheet",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "wQdA4VWngt0fTE7e",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "// Get all input items from n8n\nconst items = $input.all();\n\nreturn items.map(item => {\n  try {\n    // Parse JSON if it's a string\n    const data = typeof item.json === \"string\" ? JSON.parse(item.json) : item.json;\n\n    // Try to extract the content field where the model output is\n    const content = data?.choices?.[0]?.message?.content \n                 || data?.message?.content \n                 || data?.json?.choices?.[0]?.message?.content \n                 || \"\";\n\n    // Clean up any unwanted characters like brackets, quotes, or newlines\n    const cleaned = content\n      .replace(/[\\[\\]\\n\"]/g, \"\")\n      .trim();\n\n    // Return a clean JSON object with the extracted interests\n    return { json: { interests: cleaned } };\n\n  } catch (error) {\n    // If parsing fails, return empty interests\n    return { json: { interests: \"\" } };\n  }\n});\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        656,
+        192
+      ],
+      "id": "e4099826-fec4-4b24-9c2f-62f55b8c759c",
+      "name": "Code in JavaScript"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "8af7d0b8-c3e0-4f1d-a754-b79bdf55fd09",
+              "name": "ID",
+              "value": "={{ $json.ID }}",
+              "type": "number"
+            },
+            {
+              "id": "faa14117-6670-47cf-9fdb-f7b01a190de4",
+              "name": "Job& Skills",
+              "value": "={{ $json['Job& Skills'] }}",
+              "type": "string"
+            },
+            {
+              "id": "10277f0b-7da0-462e-9a9f-698b96e29124",
+              "name": "Interests",
+              "value": "={{ $json.Interests }}",
+              "type": "string"
+            },
+            {
+              "id": "a7aa0015-628d-4d50-96b6-9670c3d73419",
+              "name": "Online",
+              "value": "={{ $json.Online }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        1776,
+        -48
+      ],
+      "id": "9c1f87ad-c44b-43e4-b7f9-7b4bf113c4e0",
+      "name": "Edit Fields3"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Get all input items\nconst items = $input.all();\n\nreturn items.map(item => {\n  try {\n    // Try to parse JSON string if needed\n    const data = typeof item.json === \"string\" ? JSON.parse(item.json) : item.json;\n\n    // Navigate safely to the model output\n    const content = data?.choices?.[0]?.message?.content \n                 || data?.message?.content \n                 || data?.json?.choices?.[0]?.message?.content \n                 || \"\";\n\n    // Clean the text: remove brackets, quotes, and trim spaces\n    const cleaned = content\n      .replace(/[\\[\\]\\n\"]/g, \"\")\n      .trim();\n\n    // Return only the clean list of skills\n    return { json: { skills: cleaned } };\n\n  } catch (error) {\n    // In case parsing fails, return empty string\n    return { json: { skills: \"\" } };\n  }\n});\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        656,
+        -96
+      ],
+      "id": "f56cee65-0668-4b82-b636-840712b9b98e",
+      "name": "Code in JavaScript1"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "634ae569-368c-44b7-8fa2-b66c2746fbad",
+              "name": "ID",
+              "value": "={{$json[\"row_number\"]}}",
+              "type": "number"
+            }
+          ]
+        },
+        "includeOtherFields": true,
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        1104,
+        48
+      ],
+      "id": "2ec71800-174e-4901-a70f-03e61174adf3",
+      "name": "Set ID"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "e3a4c429-c89a-4ee9-9aaa-d4f4f8775a16",
+              "name": "ID",
+              "value": "={{ $json.ID }}",
+              "type": "number"
+            },
+            {
+              "id": "1379198e-d2f9-4aee-bb85-5bb1d3765ab0",
+              "name": "Name",
+              "value": "={{ $json.Name }}",
+              "type": "string"
+            },
+            {
+              "id": "1e92cf80-edab-44dd-9fe5-6b9a7d1ea310",
+              "name": "Job& Skills",
+              "value": "={{ $json['Job Position'] }}, {{ $json.skills }}",
+              "type": "string"
+            },
+            {
+              "id": "ac8618a7-fc1f-4195-be20-25eb9a4511d3",
+              "name": "Interests",
+              "value": "={{ $json.Interests }}",
+              "type": "string"
+            },
+            {
+              "id": "6cebc857-82bf-4353-839a-b2363646d1d9",
+              "name": "Online",
+              "value": "={{ $json['Remote Work'] }}",
+              "type": "string"
+            },
+            {
+              "id": "0f92d3a5-92a8-4d6f-9aa1-32cb2194d393",
+              "name": "Email",
+              "value": "={{ $json.Email }}",
+              "type": "string"
+            }
+          ]
+        },
+        "includeOtherFields": true,
+        "include": "selected",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        1552,
+        48
+      ],
+      "id": "3be33837-6c50-4cdb-832b-c55a7610e50f",
+      "name": "Exclude Unnecessary Features"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "1c1b6226-d808-4cb2-8543-912f4216cba1",
+              "name": "هل تمانع العمل عن بعد ؟",
+              "value": "={{ $json['Remote Work'] === \"mind\" ? \"Yes\" : \"No\" }}",
+              "type": "string"
+            }
+          ]
+        },
+        "includeOtherFields": true,
+        "include": "except",
+        "excludeFields": "['هل تمانع العمل عن بعد ؟']",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        1328,
+        48
+      ],
+      "id": "d744e011-7398-4c3f-af05-af8ee4b0250a",
+      "name": "IF Online"
+    },
+    {
+      "parameters": {
+        "messages": {
+          "message": [
+            {
+              "content": "You are a data validation and normalization assistant.\nYour main task is to clean, standardize, and complete a list of user-provided skills.\n\nThe input data will come from a Google Form, where users answered the question:\n\n\"What are the most important skills you have?\"\n\nYour output must strictly follow this format:\n\nSkill1, Skill2, Skill3, Skill4, Skill5\n\nRules:\n\nThere must always be 5 skills — not less.\n\nIf the user provides fewer than 5 skills, you must add similar or contextually related skills to complete the list to 5.\n\nExample: if user wrote Python, SQL, you can add Data Analysis, Machine Learning, Excel.\n\nAll skills must be clear, concise, and well-formatted (no extra spaces, no numbering, no symbols).\n\nUse proper English capitalization (e.g., “Machine Learning” not “machine learning”).\n\nThe output must be a single clean line, with skills separated by commas and spaces like this:\nPython, SQL, Machine Learning, Data Analysis, Excel\n\nDo not include any explanations, JSON, or additional formatting — just the clean skill list.\n\nExample Input:\n\n\"python, sql, data viz\"\n\nExample Output:\n\n\"Python, SQL, Data Visualization, Machine Learning, Excel\"",
+              "role": "system"
+            },
+            {
+              "content": "=User Input: {{ $json['Hard Skills'] }}"
+            }
+          ]
+        },
+        "options": {
+          "temperature": 0,
+          "topK": 1
+        },
+        "requestOptions": {}
+      },
+      "type": "n8n-nodes-base.perplexity",
+      "typeVersion": 1,
+      "position": [
+        432,
+        -96
+      ],
+      "id": "e5bf986d-579c-44d4-b219-05d6f8a281aa",
+      "name": "Skills Validation",
+      "credentials": {
+        "perplexityApi": {
+          "id": "2c7LeNd5bGP2ds8w",
+          "name": "Perplexity account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "messages": {
+          "message": [
+            {
+              "content": "You are a data validation and enrichment assistant.\nYour task is to clean, standardize, and expand a list of user-provided interests or career fields.\n\nThe input data comes from a Google Form, where users answered the question:\n\n\"What fields or roles are you most interested in?\"\n\nYour output must strictly follow this format:\n\nField1, Field2, Field3, Field4, Field5, ...\n\nRules:\n\nThere must be at least 5 items in total.\n\nIf the user provides fewer than 5 interests, you must add closely related or relevant roles/fields to reach 5.\n\nExample: if the user wrote data science, you can add data engineering, data analysis, business intelligence, artificial intelligence.\n\nIf the user provides more than 5, keep all of them.\n\nEach item must be clean, well-capitalized, and separated by commas and spaces — no numbering, no bullet points, no JSON, no extra text.\n\nThe final output must be a single clean line only, like this:\nData Science, Data Engineering, Data Analysis, Business Intelligence, Artificial Intelligence\n\nDo not include explanations, JSON, or any text other than the clean formatted list.\n\nExample Input:\n\n\"data scince, analist , ai\"\n\nExample Output:\n\n\"Data Science, Data Analysis, Data Engineering, Artificial Intelligence, Business Intelligence\"",
+              "role": "system"
+            },
+            {
+              "content": "=User Input: {{ $json.Interests }}"
+            }
+          ]
+        },
+        "options": {
+          "temperature": 0,
+          "topK": 1
+        },
+        "requestOptions": {}
+      },
+      "type": "n8n-nodes-base.perplexity",
+      "typeVersion": 1,
+      "position": [
+        432,
+        192
+      ],
+      "id": "cbe39e2a-1be8-4d32-9d50-3d11efaf75c2",
+      "name": "Interests Validation",
+      "credentials": {
+        "perplexityApi": {
+          "id": "2c7LeNd5bGP2ds8w",
+          "name": "Perplexity account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "value": "1u93f9Xllj830_KnChIwuyPYsyl1H8-mcRxXaW6XWlEg",
+          "mode": "list",
+          "cachedResultName": "SynCrew POST",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1u93f9Xllj830_KnChIwuyPYsyl1H8-mcRxXaW6XWlEg/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1u93f9Xllj830_KnChIwuyPYsyl1H8-mcRxXaW6XWlEg/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "autoMapInputData",
+          "value": {},
+          "matchingColumns": [
+            "ID"
+          ],
+          "schema": [
+            {
+              "id": "ID",
+              "displayName": "ID",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Name",
+              "displayName": "Name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Job& Skills",
+              "displayName": "Job& Skills",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Interests",
+              "displayName": "Interests",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Online",
+              "displayName": "Online",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Email",
+              "displayName": "Email",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        1776,
+        144
+      ],
+      "id": "070d418f-6f81-42dd-92d7-a752e693d627",
+      "name": "Append or update row in sheet",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "wQdA4VWngt0fTE7e",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://naserdiabat-nasser-job-scraper.hf.space/webhook",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"id\": {{ $json.ID }},\n  \"job_skills\": \"{{ $json['Job& Skills'] }}\",\n  \"interests\": \"{{ $json.Interests }}\",\n  \"online\": \"{{ $json.Online }}\"\n}\n",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        2000,
+        -48
+      ],
+      "id": "91a35a72-e620-40f0-a9be-2865eea8e45d",
+      "name": "HTTP Request"
+    },
+    {
+      "parameters": {
+        "mode": "combine",
+        "combineBy": "combineByPosition",
+        "numberInputs": 3,
+        "options": {}
+      },
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2,
+      "position": [
+        880,
+        32
+      ],
+      "id": "0729f4c6-6076-4758-b798-24078000022a",
+      "name": "Merge"
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "triggerAtHour": 19
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        -16,
+        48
+      ],
+      "id": "fbaf3881-8516-42da-8361-e77af3f8cf5f",
+      "name": "Schedule Trigger"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Get row(s) in sheet": {
+      "main": [
+        [
+          {
+            "node": "Skills Validation",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Interests Validation",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 2
+          }
+        ]
+      ]
+    },
+    "Edit Fields3": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript1": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set ID": {
+      "main": [
+        [
+          {
+            "node": "IF Online",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Exclude Unnecessary Features": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields3",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Append or update row in sheet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF Online": {
+      "main": [
+        [
+          {
+            "node": "Exclude Unnecessary Features",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Skills Validation": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Interests Validation": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Merge": {
+      "main": [
+        [
+          {
+            "node": "Set ID",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "Get row(s) in sheet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "047646f7-4636-4b6a-a05f-83db8409ff1e",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "236f0b1acb192531dccc73bc1197afa7ea966f808896faca42a988222339c00f"
+  },
+  "id": "QILrZ2FPeKnVQq3P",
+  "tags": []
+}

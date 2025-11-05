@@ -1,0 +1,4173 @@
+{
+  "name": "fetch",
+  "nodes": [
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.apify.com/v2/acts/apify~instagram-post-scraper/run-sync-get-dataset-items?token=apify_api_qr6Omnms4Pf91mLKRy0MkUEskJjDJf0Pt9cr",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "{\n    \"onlyPostsNewerThan\": \"1 days\",\n    \"resultsLimit\": 10,\n    \"skipPinnedPosts\": false,\n    \"username\": [\n        \"modeejo\"\n    ]\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -1440,
+        -48
+      ],
+      "id": "683fb5a8-c43b-49bf-9723-cae8a3ac0953",
+      "name": "modeejo"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.apify.com/v2/acts/apify~instagram-post-scraper/run-sync-get-dataset-items?token=apify_api_qr6Omnms4Pf91mLKRy0MkUEskJjDJf0Pt9cr",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "{\n    \"onlyPostsNewerThan\": \"1 days\",\n    \"resultsLimit\":10,\n    \"skipPinnedPosts\": false,\n    \"username\": [\n        \"cpfjo\"\n    ]\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -1440,
+        336
+      ],
+      "id": "9fd80291-22d7-4907-b873-5826504b8a17",
+      "name": "cpfjo"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.apify.com/v2/acts/apify~instagram-post-scraper/run-sync-get-dataset-items?token=apify_api_qr6Omnms4Pf91mLKRy0MkUEskJjDJf0Pt9cr",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "{\n    \"onlyPostsNewerThan\": \"1 days\",\n    \"resultsLimit\": 10,\n    \"skipPinnedPosts\": false,\n    \"username\": [\n        \"qafzafortech\"\n    ]\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -1440,
+        1104
+      ],
+      "id": "82414164-653c-4d54-af98-6af989bcf2f7",
+      "name": "qafzafortech"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.apify.com/v2/acts/apimaestro~linkedin-profile-posts/run-sync-get-dataset-items?token=apify_api_qr6Omnms4Pf91mLKRy0MkUEskJjDJf0Pt9cr",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "{\n    \"page_number\": 1,\n    \"limit\": 3,\n    \"username\": \"https://www.linkedin.com/in/abdullah-elyyan/\"\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -1440,
+        2256
+      ],
+      "id": "1afd3a69-2836-4372-b155-e5bffe4ba149",
+      "name": "Abdullah Abu Elayyan"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.apify.com/v2/acts/apify~instagram-post-scraper/run-sync-get-dataset-items?token=apify_api_qr6Omnms4Pf91mLKRy0MkUEskJjDJf0Pt9cr",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "{\n    \"onlyPostsNewerThan\": \"1 days\",\n    \"resultsLimit\": 10,\n    \"skipPinnedPosts\": false,\n    \"username\": [\n        \"ytj.jordan\"\n    ]\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -1440,
+        1488
+      ],
+      "id": "3f4be94e-8895-4e67-a8f6-8e6b90e8185b",
+      "name": "ytj.jordan"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.apify.com/v2/acts/apimaestro~linkedin-profile-posts/run-sync-get-dataset-items?token=apify_api_qr6Omnms4Pf91mLKRy0MkUEskJjDJf0Pt9cr",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "{\n    \"page_number\": 1,\n    \"limit\": 10,\n    \"username\": \"https://www.linkedin.com/in/eng-ahmad-suwaileh-%D9%85-%D8%A7%D8%AD%D9%85%D8%AF-%D8%B5%D9%88%D9%8A%D9%84%D8%AD-81634025/\"\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -1440,
+        1872
+      ],
+      "id": "3cb05dd7-fc21-4479-96b7-b1a6e8076499",
+      "name": "Eng.Ahmad Suwaileh م.احمد صويلح"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "711d15e5-5742-4de4-bc16-d6baec1b51ae",
+              "name": "name",
+              "value": "وزارة الاقتصاد الرقمي والريادة",
+              "type": "string"
+            },
+            {
+              "id": "ac5226ac-9c18-445f-9e36-0816be2ccf53",
+              "name": "postedby",
+              "value": "=modeejo",
+              "type": "string"
+            },
+            {
+              "id": "f5307448-daaa-4da2-872d-d3674ef0e407",
+              "name": "url",
+              "value": "={{ $json.url }}",
+              "type": "string"
+            },
+            {
+              "id": "96789c63-cbf2-438f-88fe-116c08c36e54",
+              "name": "caption",
+              "value": "={{ $json.caption }}",
+              "type": "string"
+            },
+            {
+              "id": "065c51ad-99eb-4675-b381-e78f234ec6c8",
+              "name": "images",
+              "value": "={{ $json.images }}",
+              "type": "array"
+            },
+            {
+              "id": "7b1a8ea8-50b3-4476-96c4-11c548d747cc",
+              "name": "hashtags",
+              "value": "={{ $json.hashtags }}",
+              "type": "array"
+            }
+          ]
+        },
+        "includeOtherFields": true,
+        "include": "selected",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -1216,
+        -48
+      ],
+      "id": "3a6daaee-0ca8-4fc4-a1ab-cf86b845523e",
+      "name": "Edit Fields"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.apify.com/v2/acts/apify~instagram-post-scraper/run-sync-get-dataset-items?token=apify_api_qr6Omnms4Pf91mLKRy0MkUEskJjDJf0Pt9cr",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "{\n    \"onlyPostsNewerThan\": \"1 days\",\n    \"resultsLimit\": 10,\n    \"skipPinnedPosts\": false,\n    \"username\": [\n        \"ieeettu\"\n    ]\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -1440,
+        720
+      ],
+      "id": "51c9eb29-a484-49fc-9e34-1dc191873aa4",
+      "name": "ieeettu"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "2be5befb-b396-47e2-87c6-b1bd22ef46e8",
+              "name": "name",
+              "value": "Crown Prince Foundation",
+              "type": "string"
+            },
+            {
+              "id": "ac5226ac-9c18-445f-9e36-0816be2ccf53",
+              "name": "postedby",
+              "value": "=cpfjo",
+              "type": "string"
+            },
+            {
+              "id": "f5307448-daaa-4da2-872d-d3674ef0e407",
+              "name": "url",
+              "value": "={{ $json.url }}",
+              "type": "string"
+            },
+            {
+              "id": "96789c63-cbf2-438f-88fe-116c08c36e54",
+              "name": "caption",
+              "value": "={{ $json.caption }}",
+              "type": "string"
+            },
+            {
+              "id": "065c51ad-99eb-4675-b381-e78f234ec6c8",
+              "name": "images",
+              "value": "={{ $json.images }}",
+              "type": "array"
+            },
+            {
+              "id": "f4b37d55-e306-4207-8cb8-d53c68eaad28",
+              "name": "hashtags",
+              "value": "={{ $json.hashtags }}",
+              "type": "array"
+            }
+          ]
+        },
+        "includeOtherFields": true,
+        "include": "selected",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -1216,
+        336
+      ],
+      "id": "4b9dd97a-ff00-4e88-a75e-684e9110dfbd",
+      "name": "Edit Fields1"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "f1565865-4a8f-42e6-8485-27a782d93611",
+              "name": "name",
+              "value": "IEEE Tafila Technical University Student Branch",
+              "type": "string"
+            },
+            {
+              "id": "ac5226ac-9c18-445f-9e36-0816be2ccf53",
+              "name": "postedby",
+              "value": "=ieeettu",
+              "type": "string"
+            },
+            {
+              "id": "f5307448-daaa-4da2-872d-d3674ef0e407",
+              "name": "url",
+              "value": "={{ $json.url }}",
+              "type": "string"
+            },
+            {
+              "id": "96789c63-cbf2-438f-88fe-116c08c36e54",
+              "name": "caption",
+              "value": "={{ $json.caption }}",
+              "type": "string"
+            },
+            {
+              "id": "065c51ad-99eb-4675-b381-e78f234ec6c8",
+              "name": "images",
+              "value": "={{ $json.images }}",
+              "type": "array"
+            },
+            {
+              "id": "f4b37d55-e306-4207-8cb8-d53c68eaad28",
+              "name": "hashtags",
+              "value": "={{ $json.hashtags }}",
+              "type": "array"
+            }
+          ]
+        },
+        "includeOtherFields": true,
+        "include": "selected",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -1216,
+        720
+      ],
+      "id": "cd5c0b25-744c-4fd3-866f-654214575858",
+      "name": "Edit Fields2"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "60460b67-cf55-4b60-a753-f2d3401cfddd",
+              "name": "name",
+              "value": "قفزة Qafza",
+              "type": "string"
+            },
+            {
+              "id": "ac5226ac-9c18-445f-9e36-0816be2ccf53",
+              "name": "postedby",
+              "value": "=qafzafortech",
+              "type": "string"
+            },
+            {
+              "id": "f5307448-daaa-4da2-872d-d3674ef0e407",
+              "name": "url",
+              "value": "={{ $json.url }}",
+              "type": "string"
+            },
+            {
+              "id": "96789c63-cbf2-438f-88fe-116c08c36e54",
+              "name": "caption",
+              "value": "={{ $json.caption }}",
+              "type": "string"
+            },
+            {
+              "id": "065c51ad-99eb-4675-b381-e78f234ec6c8",
+              "name": "images",
+              "value": "={{ $json.images }}",
+              "type": "array"
+            },
+            {
+              "id": "f4b37d55-e306-4207-8cb8-d53c68eaad28",
+              "name": "hashtags",
+              "value": "={{ $json.hashtags }}",
+              "type": "array"
+            }
+          ]
+        },
+        "includeOtherFields": true,
+        "include": "selected",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -1216,
+        1104
+      ],
+      "id": "5f85af15-645e-49c9-b905-1d9427d4b29b",
+      "name": "Edit Fields3"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "d8254ba5-9a1e-46b6-a158-9cbcfda75aba",
+              "name": "name",
+              "value": "Youth, Technology & Jobs",
+              "type": "string"
+            },
+            {
+              "id": "ac5226ac-9c18-445f-9e36-0816be2ccf53",
+              "name": "postedby",
+              "value": "=ytj.jordan",
+              "type": "string"
+            },
+            {
+              "id": "f5307448-daaa-4da2-872d-d3674ef0e407",
+              "name": "url",
+              "value": "={{ $json.url }}",
+              "type": "string"
+            },
+            {
+              "id": "96789c63-cbf2-438f-88fe-116c08c36e54",
+              "name": "caption",
+              "value": "={{ $json.caption }}",
+              "type": "string"
+            },
+            {
+              "id": "065c51ad-99eb-4675-b381-e78f234ec6c8",
+              "name": "images",
+              "value": "={{ $json.images }}",
+              "type": "array"
+            },
+            {
+              "id": "f4b37d55-e306-4207-8cb8-d53c68eaad28",
+              "name": "hashtags",
+              "value": "={{ $json.hashtags }}",
+              "type": "array"
+            }
+          ]
+        },
+        "includeOtherFields": true,
+        "include": "selected",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -1216,
+        1488
+      ],
+      "id": "89d299ab-f336-44b7-9180-fba8f101bc91",
+      "name": "Edit Fields4"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "35354a2d-cb0a-453d-b3cb-cd568fcc5777",
+              "name": "Author",
+              "value": "={{ $json.author.first_name }}{{ $json.author.last_name }}",
+              "type": "string"
+            },
+            {
+              "id": "c1e5834a-0bf2-4d45-b893-8bfad53976b3",
+              "name": "time",
+              "value": "={{ $json.posted_at.relative }}",
+              "type": "string"
+            },
+            {
+              "id": "e6b3da86-fe6a-447c-8677-0bc62485e0df",
+              "name": "text",
+              "value": "={{ $json.text }}",
+              "type": "string"
+            },
+            {
+              "id": "4cdf287e-098e-477f-90fc-5c97c461493d",
+              "name": "url",
+              "value": "={{ $json.url }}",
+              "type": "string"
+            },
+            {
+              "id": "22d0b086-103d-402e-81ce-5f9895f36cc8",
+              "name": "media",
+              "value": "={{ $json.media }}",
+              "type": "string"
+            },
+            {
+              "id": "11f3a7a7-8a83-4b33-bc4d-8f5944372009",
+              "name": "article",
+              "value": "={{ $json.article }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -1216,
+        1872
+      ],
+      "id": "ce4fd5ad-8744-493d-8550-18ec3704c11c",
+      "name": "Edit Fields5"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "35354a2d-cb0a-453d-b3cb-cd568fcc5777",
+              "name": "Author",
+              "value": "={{ $json.author.first_name }}{{ $json.author.last_name }}",
+              "type": "string"
+            },
+            {
+              "id": "c1e5834a-0bf2-4d45-b893-8bfad53976b3",
+              "name": "time",
+              "value": "={{ $json.posted_at.relative }}",
+              "type": "string"
+            },
+            {
+              "id": "e6b3da86-fe6a-447c-8677-0bc62485e0df",
+              "name": "text",
+              "value": "={{ $json.text }}",
+              "type": "string"
+            },
+            {
+              "id": "dc01c0ac-f919-4790-a86e-1c261874a564",
+              "name": "url",
+              "value": "={{ $json.url }}",
+              "type": "string"
+            },
+            {
+              "id": "22d0b086-103d-402e-81ce-5f9895f36cc8",
+              "name": "media",
+              "value": "={{ $json.media }}",
+              "type": "string"
+            },
+            {
+              "id": "11f3a7a7-8a83-4b33-bc4d-8f5944372009",
+              "name": "article",
+              "value": "={{ $json.article }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -1216,
+        2256
+      ],
+      "id": "42f1fdbe-d551-4a3d-be3d-c6e1bb85ba1c",
+      "name": "Edit Fields6"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Loop through all input items\nfor (const item of $input.all()) {\n  const timeString = item.json.time || \"\";\n\n  // Match common time units like hour/hours/day/days\n  const match = timeString.match(/\\b(hour|hours|day|days)\\b/i);\n\n  // Add only the metric to JSON\n  item.json.time_metric = match ? match[1].toLowerCase() : null;\n}\n\nreturn $input.all();\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -992,
+        1872
+      ],
+      "id": "9ee63887-72f1-459e-963c-0d20f108428f",
+      "name": "Code in JavaScript"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "ae07311a-5f0a-416b-8aa1-34fe3f97c312",
+              "leftValue": "={{ $json.time_metric }}",
+              "rightValue": "hours",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.filter",
+      "typeVersion": 2.2,
+      "position": [
+        -768,
+        1872
+      ],
+      "id": "47f918eb-8e59-4e68-9148-ae7d53c93292",
+      "name": "Filter"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Loop through all input items\nfor (const item of $input.all()) {\n  const timeString = item.json.time || \"\";\n\n  // Match common time units like hour/hours/day/days\n  const match = timeString.match(/\\b(hour|hours|day|days)\\b/i);\n\n  // Add only the metric to JSON\n  item.json.time_metric = match ? match[1].toLowerCase() : null;\n}\n\nreturn $input.all();\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -992,
+        2256
+      ],
+      "id": "91ef6399-07fd-43a5-84fd-769c7ada5a80",
+      "name": "Code in JavaScript1"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "ae07311a-5f0a-416b-8aa1-34fe3f97c312",
+              "leftValue": "={{ $json.time_metric }}",
+              "rightValue": "hours",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.filter",
+      "typeVersion": 2.2,
+      "position": [
+        -768,
+        2256
+      ],
+      "id": "5505f6c6-29a7-4972-91b0-7082d08b69f9",
+      "name": "Filter1"
+    },
+    {
+      "parameters": {
+        "messages": {
+          "message": [
+            {
+              "content": "🎯 ROLE\n\nYou are an intelligent binary classifier that determines if a LinkedIn, Instagram, or similar social media post represents a real opportunity for students, recent graduates, or young professionals to learn, train, participate, or apply to something beneficial (educational, professional, or developmental).\n\nReturn strictly:\n\n{\"is_opportunity\": true}\n\n\nor\n\n{\"is_opportunity\": false}\n\n🧩 DEFINITION OF “OPPORTUNITY”\n\nAn opportunity means the post invites participation in a current or upcoming program, training, job, competition, or learning event that helps people gain skills, experience, or exposure — especially if it’s free or affordable (≤ 20 JOD ≈ 30 USD).\n\nIt includes calls to action, announcements, open registrations, or learning invitations.\n\n🧭 CLASSIFICATION LOGIC\n✅ TRUE — if ANY of the following apply:\n\nCall for participation\nPhrases such as:\n\nEnglish: “Join”, “Register”, “Apply”, “Sign up”, “We invite you”, “Seats available”, “Don’t miss this”, “Open for registration”.\n\nArabic: “انضم”, “سجل”, “فرصة تدريبية”, “ندعوكم”, “ورشات تدريبية”, “برنامج تدريبي”, “باب التسجيل مفتوح”, “فرصة جديدة”, “تدريب مجاني”.\n\nEducational or professional development content, including:\n\nTrainings, bootcamps, workshops, courses.\n\nInternships, jobs, fellowships, volunteering, mentoring.\n\nConferences, competitions, hackathons, academic events.\n\nScholarships, grants, innovation challenges.\n\nMentions of registration links, dates, or locations, e.g.\n“التسجيل الآن – من 5 إلى 10 نوفمبر” → ✅\n“Apply before 10 Nov” → ✅\n\nFree or low-cost events (≤ 20 JOD)\n\nIf price not mentioned → assume free.\n\nIf explicitly high cost → False.\n\nIf small fee but clearly educational → True.\n\nOpen or upcoming events\nWords like: “coming soon”, “upcoming”, “launching”, “join this month”, “register now”, “starting soon”, “new opportunity”, “برنامج جديد”, “انطلاق”.\n\nCollaborations and initiatives that offer tangible participation\ne.g., “وزارة الاقتصاد الرقمي تطلق برنامج تدريب لطلاب الجامعات بالتعاون مع...” → ✅\n\n❌ FALSE — if ANY of the following apply:\n\nPast or closed events\nIndicators: “اختتام”, “انتهى”, “تم عقد”, “أنهينا”, “أقيمت”, “احتفلنا”, “we completed”, “we concluded”, “we’re proud to announce completion”.\n\nGeneral news or initiatives with no open participation\ne.g., “أعلنت الوزارة عن مبادرة لدعم الشركات الناشئة” (no mention of joining/registering) → ❌\n\nPersonal achievements or reflections\ne.g., “I attended”, “I completed”, “فخور بالمشاركة في”, “شاركت في مؤتمر”.\n\nCommercial, expensive, or promotional services\ne.g., “Join our paid course for 150 JOD”, “خصومات على الدورات المدفوعة” → ❌\n\nGeneral motivational, informational, or awareness posts\ne.g., “5 نصائح لتطوير الذات”, “كيف تبني سيرتك الذاتية” (without event invitation).\n\n🧩 SPECIAL CASE HANDLING\n\nIf the post mentions a partnership or initiative but does not invite others → False.\n\nIf the post celebrates results or graduates (e.g., “اختتام البرنامج التدريبي”) → False.\n\nIf the post shares learning resources (YouTube, article) with no event → False.\n\nIf the post announces an open bootcamp, call, or workshop, even without “Apply now” → True.\n\nIf language is vague but includes key phrases like “فرصة تدريبية” or “workshop” → True.\n\nIf uncertain whether it’s still active → choose True if it seems intended for participants (prefer recall over precision).\n\n💬 EXAMPLES\n\n✅ TRUE\n\n“🎯 فرصة تدريبية جديدة من قفزة تك! سارع بالتسجيل الآن.”\n\n“Join our free 3-day AI Bootcamp starting this Friday.”\n\n“تدعوكم مؤسسة ولي العهد لحضور جلسة حول ريادة الأعمال.”\n\n“وزارة الاقتصاد الرقمي تطلق برنامج تدريب جديد لطلبة الجامعات.”\n\n“Hackathon registration is now open for all students.”\n\n“ورشة تدريبية برسوم رمزية 10 دنانير تشمل الشهادة.”\n\n❌ FALSE\n\n“اختتام دورة تدريب المهارات الرقمية.”\n\n“أعلنت الوزارة عن مبادرة لدعم الشركات.”\n\n“فخورون بخريجينا من برنامج XYZ.”\n\n“شاركنا في المنتدى العربي للريادة.”\n\n“دورة احترافية مدفوعة 200 JOD.”\n\n“5 نصائح لتطوير مهاراتك في التحليل.”\n\n⚙️ OUTPUT FORMAT\n\nReturn only one line in valid JSON:\n\n{\"is_opportunity\": true}\n\n\nor\n\n{\"is_opportunity\": false}\n\n\nNo text, no explanation.\n\n🧩 NOTES\n\nSupport both Arabic and English text.\n\nBe robust to emojis, hashtags, or markdown (ignore them).\n\nFocus on meaning and intent, not formatting.\n\nWhen in doubt → lean toward True if it benefits learners or students.",
+              "role": "system"
+            },
+            {
+              "content": "=Text To Classify:  {{ $json.text }}"
+            }
+          ]
+        },
+        "options": {
+          "temperature": 0,
+          "topK": 1
+        },
+        "requestOptions": {}
+      },
+      "type": "n8n-nodes-base.perplexity",
+      "typeVersion": 1,
+      "position": [
+        -544,
+        2352
+      ],
+      "id": "c0b4bede-78ee-4989-9ecd-afc20cea8fd3",
+      "name": "Message a model",
+      "credentials": {
+        "perplexityApi": {
+          "id": "2c7LeNd5bGP2ds8w",
+          "name": "Perplexity account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "messages": {
+          "message": [
+            {
+              "content": "🎯 ROLE\n\nYou are an intelligent binary classifier that determines if a LinkedIn, Instagram, or similar social media post represents a real opportunity for students, recent graduates, or young professionals to learn, train, participate, or apply to something beneficial (educational, professional, or developmental).\n\nReturn strictly:\n\n{\"is_opportunity\": true}\n\n\nor\n\n{\"is_opportunity\": false}\n\n🧩 DEFINITION OF “OPPORTUNITY”\n\nAn opportunity means the post invites participation in a current or upcoming program, training, job, competition, or learning event that helps people gain skills, experience, or exposure — especially if it’s free or affordable (≤ 20 JOD ≈ 30 USD).\n\nIt includes calls to action, announcements, open registrations, or learning invitations.\n\n🧭 CLASSIFICATION LOGIC\n✅ TRUE — if ANY of the following apply:\n\nCall for participation\nPhrases such as:\n\nEnglish: “Join”, “Register”, “Apply”, “Sign up”, “We invite you”, “Seats available”, “Don’t miss this”, “Open for registration”.\n\nArabic: “انضم”, “سجل”, “فرصة تدريبية”, “ندعوكم”, “ورشات تدريبية”, “برنامج تدريبي”, “باب التسجيل مفتوح”, “فرصة جديدة”, “تدريب مجاني”.\n\nEducational or professional development content, including:\n\nTrainings, bootcamps, workshops, courses.\n\nInternships, jobs, fellowships, volunteering, mentoring.\n\nConferences, competitions, hackathons, academic events.\n\nScholarships, grants, innovation challenges.\n\nMentions of registration links, dates, or locations, e.g.\n“التسجيل الآن – من 5 إلى 10 نوفمبر” → ✅\n“Apply before 10 Nov” → ✅\n\nFree or low-cost events (≤ 20 JOD)\n\nIf price not mentioned → assume free.\n\nIf explicitly high cost → False.\n\nIf small fee but clearly educational → True.\n\nOpen or upcoming events\nWords like: “coming soon”, “upcoming”, “launching”, “join this month”, “register now”, “starting soon”, “new opportunity”, “برنامج جديد”, “انطلاق”.\n\nCollaborations and initiatives that offer tangible participation\ne.g., “وزارة الاقتصاد الرقمي تطلق برنامج تدريب لطلاب الجامعات بالتعاون مع...” → ✅\n\n❌ FALSE — if ANY of the following apply:\n\nPast or closed events\nIndicators: “اختتام”, “انتهى”, “تم عقد”, “أنهينا”, “أقيمت”, “احتفلنا”, “we completed”, “we concluded”, “we’re proud to announce completion”.\n\nGeneral news or initiatives with no open participation\ne.g., “أعلنت الوزارة عن مبادرة لدعم الشركات الناشئة” (no mention of joining/registering) → ❌\n\nPersonal achievements or reflections\ne.g., “I attended”, “I completed”, “فخور بالمشاركة في”, “شاركت في مؤتمر”.\n\nCommercial, expensive, or promotional services\ne.g., “Join our paid course for 150 JOD”, “خصومات على الدورات المدفوعة” → ❌\n\nGeneral motivational, informational, or awareness posts\ne.g., “5 نصائح لتطوير الذات”, “كيف تبني سيرتك الذاتية” (without event invitation).\n\n🧩 SPECIAL CASE HANDLING\n\nIf the post mentions a partnership or initiative but does not invite others → False.\n\nIf the post celebrates results or graduates (e.g., “اختتام البرنامج التدريبي”) → False.\n\nIf the post shares learning resources (YouTube, article) with no event → False.\n\nIf the post announces an open bootcamp, call, or workshop, even without “Apply now” → True.\n\nIf language is vague but includes key phrases like “فرصة تدريبية” or “workshop” → True.\n\nIf uncertain whether it’s still active → choose True if it seems intended for participants (prefer recall over precision).\n\n💬 EXAMPLES\n\n✅ TRUE\n\n“🎯 فرصة تدريبية جديدة من قفزة تك! سارع بالتسجيل الآن.”\n\n“Join our free 3-day AI Bootcamp starting this Friday.”\n\n“تدعوكم مؤسسة ولي العهد لحضور جلسة حول ريادة الأعمال.”\n\n“وزارة الاقتصاد الرقمي تطلق برنامج تدريب جديد لطلبة الجامعات.”\n\n“Hackathon registration is now open for all students.”\n\n“ورشة تدريبية برسوم رمزية 10 دنانير تشمل الشهادة.”\n\n❌ FALSE\n\n“اختتام دورة تدريب المهارات الرقمية.”\n\n“أعلنت الوزارة عن مبادرة لدعم الشركات.”\n\n“فخورون بخريجينا من برنامج XYZ.”\n\n“شاركنا في المنتدى العربي للريادة.”\n\n“دورة احترافية مدفوعة 200 JOD.”\n\n“5 نصائح لتطوير مهاراتك في التحليل.”\n\n⚙️ OUTPUT FORMAT\n\nReturn only one line in valid JSON:\n\n{\"is_opportunity\": true}\n\n\nor\n\n{\"is_opportunity\": false}\n\n\nNo text, no explanation.\n\n🧩 NOTES\n\nSupport both Arabic and English text.\n\nBe robust to emojis, hashtags, or markdown (ignore them).\n\nFocus on meaning and intent, not formatting.\n\nWhen in doubt → lean toward True if it benefits learners or students.",
+              "role": "system"
+            },
+            {
+              "content": "=Text To Classify:  {{ $json.text }}"
+            }
+          ]
+        },
+        "options": {
+          "temperature": 0,
+          "topK": 1
+        },
+        "requestOptions": {}
+      },
+      "type": "n8n-nodes-base.perplexity",
+      "typeVersion": 1,
+      "position": [
+        -544,
+        1968
+      ],
+      "id": "91f0a62a-2f39-49ee-96ec-bb0120a08e24",
+      "name": "Message a model1",
+      "credentials": {
+        "perplexityApi": {
+          "id": "2c7LeNd5bGP2ds8w",
+          "name": "Perplexity account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "0a2b7d9d-d05b-4a00-9274-ee9060266538",
+              "leftValue": "={{ $json.choices[0].message.content }}",
+              "rightValue": "{\"is_opportunity\": true}",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        -320,
+        1968
+      ],
+      "id": "4bf6eab9-1313-462d-8638-fae467c230f1",
+      "name": "If"
+    },
+    {
+      "parameters": {
+        "mode": "combine",
+        "fieldsToMatchString": "id",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2,
+      "position": [
+        128,
+        1872
+      ],
+      "id": "b89ff5e9-0914-4ae5-8355-d64ac74be901",
+      "name": "Merge"
+    },
+    {
+      "parameters": {
+        "messages": {
+          "message": [
+            {
+              "content": "# ================================================================\n# 🧩 SLACK OPPORTUNITY MESSAGE COMPOSER AGENT\n# ================================================================\n\n🎯 ROLE\nYou are a professional communication assistant that converts structured opportunity data\n(from LinkedIn posts) into concise, engaging, and formatted Slack messages in Arabic or English.\n\nYour task is to write a clear, attractive message suitable for posting directly in a Slack channel.\n\n---\n\n📥 INPUT\nYou receive a JSON object with:\n- Author\n- Text (LinkedIn post content)\n- URL\n\n---\n\n🧩 TASK\nCraft a short Slack message (Arabic preferred if input is Arabic, otherwise English) that includes:\n1. A short, engaging headline (e.g., “🎓 فرصة تدريبية جديدة!” or “🚀 New Opportunity!”).\n2. The author or organization name (e.g., “أعلن م. أحمد صويلح عن…”).\n3. The main content of the post in summarized, clear form (do not copy the whole text).\n4. A single source link in the format:\n   🔗 **المصدر:** [LinkedIn Post](<url>)\n\nKeep the structure visually clean and friendly using emojis and line breaks.\n\n---\n\n⚙️ OUTPUT FORMAT\nOutput plain text (ready to send to Slack).  \nDo not output JSON, markdown code fences, or explanations.\n\n---\n\n✅ EXAMPLE OUTPUT\n🎓 **فرصة تدريبية جديدة!**  \nأعلن **م. أحمد صويلح** عن برنامج تدريبي مجاني بعنوان  \n**\"خدمة العملاء عبر الهاتف – Call Center\"** في محافظة العقبة 🇯🇴  \n\n🔗 **المصدر:** [LinkedIn Post](https://www.linkedin.com/posts/eng-ahmad-suwaileh-81634025_aesaehaesaeu-activity-7391047544329474048-lLvE)\n\n# END OF PROMPT\n# ================================================================\n",
+              "role": "system"
+            },
+            {
+              "content": "=- Author: {{ $json.Author }}\n- Text (LinkedIn post content): {{ $json.text }}\n- URL: {{ $json.url }}"
+            }
+          ]
+        },
+        "options": {
+          "temperature": 0,
+          "topK": 1
+        },
+        "requestOptions": {}
+      },
+      "type": "n8n-nodes-base.perplexity",
+      "typeVersion": 1,
+      "position": [
+        352,
+        2000
+      ],
+      "id": "c4fb0b18-aaa6-41ac-945e-945d0331fd69",
+      "name": "Message a model2",
+      "credentials": {
+        "perplexityApi": {
+          "id": "2c7LeNd5bGP2ds8w",
+          "name": "Perplexity account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "mode": "combine",
+        "combineBy": "combineByPosition",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2,
+      "position": [
+        576,
+        1872
+      ],
+      "id": "581afede-324d-406b-87e2-8fb166d9def5",
+      "name": "Merge1"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "9e41f5d5-b320-4069-864a-0435100ebaf8",
+              "name": "Author",
+              "value": "={{ $json.Author }}",
+              "type": "string"
+            },
+            {
+              "id": "697724b6-bd67-482a-8df0-3b87a6ce4f65",
+              "name": "url",
+              "value": "={{ $json.url }}",
+              "type": "string"
+            },
+            {
+              "id": "321f39e7-0c80-4bcc-8d70-1624622fe781",
+              "name": "Slack",
+              "value": "={{ $json.choices[0].message.content }}",
+              "type": "string"
+            },
+            {
+              "id": "56e60a89-745e-4a87-9434-65c6713d43e3",
+              "name": "past",
+              "value": "0",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        800,
+        1872
+      ],
+      "id": "361394df-a68a-4fea-81aa-20c9f31600f4",
+      "name": "Edit Fields7"
+    },
+    {
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "value": "1rUV6GTqkb30URkLoKy-X2V28jewikwsqUuwwU6v5-Po",
+          "mode": "list",
+          "cachedResultName": "LinkedIn",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1rUV6GTqkb30URkLoKy-X2V28jewikwsqUuwwU6v5-Po/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1rUV6GTqkb30URkLoKy-X2V28jewikwsqUuwwU6v5-Po/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Author": "={{ $json.Author }}",
+            "url": "={{ $json.url }}",
+            "Slack": "={{ $json.Slack }}",
+            "past": "={{ $json.past }}"
+          },
+          "matchingColumns": [
+            "url"
+          ],
+          "schema": [
+            {
+              "id": "Author",
+              "displayName": "Author",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "url",
+              "displayName": "url",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Slack",
+              "displayName": "Slack",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "past",
+              "displayName": "past",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        1024,
+        1872
+      ],
+      "id": "fa5943a8-120b-4e2a-9520-e329a9ab1cf8",
+      "name": "Append or update row in sheet",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "wQdA4VWngt0fTE7e",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "0a2b7d9d-d05b-4a00-9274-ee9060266538",
+              "leftValue": "={{ $json.choices[0].message.content }}",
+              "rightValue": "{\"is_opportunity\": true}",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        -320,
+        2352
+      ],
+      "id": "da141d7f-e03e-4958-ad47-1e1f4407bc00",
+      "name": "If1"
+    },
+    {
+      "parameters": {
+        "mode": "combine",
+        "combineBy": "combineByPosition",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2,
+      "position": [
+        128,
+        2256
+      ],
+      "id": "842d37ad-9af5-4735-bbf6-7aef5b6181f8",
+      "name": "Merge2"
+    },
+    {
+      "parameters": {
+        "messages": {
+          "message": [
+            {
+              "content": "# ================================================================\n# 🧩 SLACK OPPORTUNITY MESSAGE COMPOSER AGENT\n# ================================================================\n\n🎯 ROLE\nYou are a professional communication assistant that converts structured opportunity data\n(from LinkedIn posts) into concise, engaging, and formatted Slack messages in Arabic or English.\n\nYour task is to write a clear, attractive message suitable for posting directly in a Slack channel.\n\n---\n\n📥 INPUT\nYou receive a JSON object with:\n- Author\n- Text (LinkedIn post content)\n- URL\n\n---\n\n🧩 TASK\nCraft a short Slack message (Arabic preferred if input is Arabic, otherwise English) that includes:\n1. A short, engaging headline (e.g., “🎓 فرصة تدريبية جديدة!” or “🚀 New Opportunity!”).\n2. The author or organization name (e.g., “أعلن م. عبدالله ابوعليان عن…”).\n3. The main content of the post in summarized, clear form (do not copy the whole text).\n4. A single source link in the format:\n   🔗 **المصدر:** [LinkedIn Post](<url>)\n\nKeep the structure visually clean and friendly using emojis and line breaks.\n\n---\n\n⚙️ OUTPUT FORMAT\nOutput plain text (ready to send to Slack).  \nDo not output JSON, markdown code fences, or explanations.\n\n---\n\n✅ EXAMPLE OUTPUT\n🎓 **فرصة تدريبية جديدة!**  \nأعلن **م. عبدالله ابوعليان** عن برنامج تدريبي مجاني بعنوان  \n**\"خدمة العملاء عبر الهاتف – Call Center\"** في محافظة العقبة 🇯🇴  \n\n🔗 **المصدر:** [LinkedIn Post](https://www.linkedin.com/...)\n\n# END OF PROMPT\n# ================================================================\n",
+              "role": "system"
+            },
+            {
+              "content": "=- Author: {{ $json.Author }}\n- Text (LinkedIn post content): {{ $json.text }}\n- URL: {{ $json.url }}"
+            }
+          ]
+        },
+        "options": {
+          "temperature": 0,
+          "topK": 1
+        },
+        "requestOptions": {}
+      },
+      "type": "n8n-nodes-base.perplexity",
+      "typeVersion": 1,
+      "position": [
+        352,
+        2336
+      ],
+      "id": "3aaddfd2-a952-484b-8396-f544366fbd3c",
+      "name": "Message a model3",
+      "credentials": {
+        "perplexityApi": {
+          "id": "2c7LeNd5bGP2ds8w",
+          "name": "Perplexity account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "mode": "combine",
+        "combineBy": "combineByPosition",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2,
+      "position": [
+        576,
+        2256
+      ],
+      "id": "5e08596b-fb6e-4cae-ba33-0c6d008ec56b",
+      "name": "Merge3"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "9e41f5d5-b320-4069-864a-0435100ebaf8",
+              "name": "Author",
+              "value": "={{ $json.Author }}",
+              "type": "string"
+            },
+            {
+              "id": "697724b6-bd67-482a-8df0-3b87a6ce4f65",
+              "name": "url",
+              "value": "={{ $json.url }}",
+              "type": "string"
+            },
+            {
+              "id": "321f39e7-0c80-4bcc-8d70-1624622fe781",
+              "name": "Slack",
+              "value": "={{ $json.choices[0].message.content }}",
+              "type": "string"
+            },
+            {
+              "id": "4de80961-ddfb-4d1f-a1c0-ba2777c8a5c8",
+              "name": "past",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        800,
+        2256
+      ],
+      "id": "e71bbfdc-ea77-4610-bdd6-9b704a1f3e88",
+      "name": "Edit Fields8"
+    },
+    {
+      "parameters": {
+        "messages": {
+          "message": [
+            {
+              "content": "🎯 ROLE\n\nYou are an intelligent binary classifier that determines if a LinkedIn, Instagram, or similar social media post represents a real opportunity for students, recent graduates, or young professionals to learn, train, participate, or apply to something beneficial (educational, professional, or developmental).\n\nReturn strictly:\n\n{\"is_opportunity\": true}\n\n\nor\n\n{\"is_opportunity\": false}\n\n🧩 DEFINITION OF “OPPORTUNITY”\n\nAn opportunity means the post invites participation in a current or upcoming program, training, job, competition, or learning event that helps people gain skills, experience, or exposure — especially if it’s free or affordable (≤ 20 JOD ≈ 30 USD).\n\nIt includes calls to action, announcements, open registrations, or learning invitations.\n\n🧭 CLASSIFICATION LOGIC\n✅ TRUE — if ANY of the following apply:\n\nCall for participation\nPhrases such as:\n\nEnglish: “Join”, “Register”, “Apply”, “Sign up”, “We invite you”, “Seats available”, “Don’t miss this”, “Open for registration”.\n\nArabic: “انضم”, “سجل”, “فرصة تدريبية”, “ندعوكم”, “ورشات تدريبية”, “برنامج تدريبي”, “باب التسجيل مفتوح”, “فرصة جديدة”, “تدريب مجاني”.\n\nEducational or professional development content, including:\n\nTrainings, bootcamps, workshops, courses.\n\nInternships, jobs, fellowships, volunteering, mentoring.\n\nConferences, competitions, hackathons, academic events.\n\nScholarships, grants, innovation challenges.\n\nMentions of registration links, dates, or locations, e.g.\n“التسجيل الآن – من 5 إلى 10 نوفمبر” → ✅\n“Apply before 10 Nov” → ✅\n\nFree or low-cost events (≤ 20 JOD)\n\nIf price not mentioned → assume free.\n\nIf explicitly high cost → False.\n\nIf small fee but clearly educational → True.\n\nOpen or upcoming events\nWords like: “coming soon”, “upcoming”, “launching”, “join this month”, “register now”, “starting soon”, “new opportunity”, “برنامج جديد”, “انطلاق”.\n\nCollaborations and initiatives that offer tangible participation\ne.g., “وزارة الاقتصاد الرقمي تطلق برنامج تدريب لطلاب الجامعات بالتعاون مع...” → ✅\n\n❌ FALSE — if ANY of the following apply:\n\nPast or closed events\nIndicators: “اختتام”, “انتهى”, “تم عقد”, “أنهينا”, “أقيمت”, “احتفلنا”, “we completed”, “we concluded”, “we’re proud to announce completion”.\n\nGeneral news or initiatives with no open participation\ne.g., “أعلنت الوزارة عن مبادرة لدعم الشركات الناشئة” (no mention of joining/registering) → ❌\n\nPersonal achievements or reflections\ne.g., “I attended”, “I completed”, “فخور بالمشاركة في”, “شاركت في مؤتمر”.\n\nCommercial, expensive, or promotional services\ne.g., “Join our paid course for 150 JOD”, “خصومات على الدورات المدفوعة” → ❌\n\nGeneral motivational, informational, or awareness posts\ne.g., “5 نصائح لتطوير الذات”, “كيف تبني سيرتك الذاتية” (without event invitation).\n\n🧩 SPECIAL CASE HANDLING\n\nIf the post mentions a partnership or initiative but does not invite others → False.\n\nIf the post celebrates results or graduates (e.g., “اختتام البرنامج التدريبي”) → False.\n\nIf the post shares learning resources (YouTube, article) with no event → False.\n\nIf the post announces an open bootcamp, call, or workshop, even without “Apply now” → True.\n\nIf language is vague but includes key phrases like “فرصة تدريبية” or “workshop” → True.\n\nIf uncertain whether it’s still active → choose True if it seems intended for participants (prefer recall over precision).\n\n💬 EXAMPLES\n\n✅ TRUE\n\n“🎯 فرصة تدريبية جديدة من قفزة تك! سارع بالتسجيل الآن.”\n\n“Join our free 3-day AI Bootcamp starting this Friday.”\n\n“تدعوكم مؤسسة ولي العهد لحضور جلسة حول ريادة الأعمال.”\n\n“وزارة الاقتصاد الرقمي تطلق برنامج تدريب جديد لطلبة الجامعات.”\n\n“Hackathon registration is now open for all students.”\n\n“ورشة تدريبية برسوم رمزية 10 دنانير تشمل الشهادة.”\n\n❌ FALSE\n\n“اختتام دورة تدريب المهارات الرقمية.”\n\n“أعلنت الوزارة عن مبادرة لدعم الشركات.”\n\n“فخورون بخريجينا من برنامج XYZ.”\n\n“شاركنا في المنتدى العربي للريادة.”\n\n“دورة احترافية مدفوعة 200 JOD.”\n\n“5 نصائح لتطوير مهاراتك في التحليل.”\n\n⚙️ OUTPUT FORMAT\n\nReturn only one line in valid JSON:\n\n{\"is_opportunity\": true}\n\n\nor\n\n{\"is_opportunity\": false}\n\n\nNo text, no explanation.\n\n🧩 NOTES\n\nSupport both Arabic and English text.\n\nBe robust to emojis, hashtags, or markdown (ignore them).\n\nFocus on meaning and intent, not formatting.\n\nWhen in doubt → lean toward True if it benefits learners or students.",
+              "role": "system"
+            },
+            {
+              "content": "=Text To Classify:   {{ $json.caption }}"
+            }
+          ]
+        },
+        "options": {
+          "temperature": 0,
+          "topK": 1
+        },
+        "requestOptions": {}
+      },
+      "type": "n8n-nodes-base.perplexity",
+      "typeVersion": 1,
+      "position": [
+        -992,
+        48
+      ],
+      "id": "cad3fa17-be1a-4762-9b51-8c616e033460",
+      "name": "Message a model4",
+      "credentials": {
+        "perplexityApi": {
+          "id": "2c7LeNd5bGP2ds8w",
+          "name": "Perplexity account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "0a2b7d9d-d05b-4a00-9274-ee9060266538",
+              "leftValue": "={{ $json.choices[0].message.content }}",
+              "rightValue": "{\"is_opportunity\": true}",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        -544,
+        48
+      ],
+      "id": "caaf3894-a21f-4b87-baa4-f4dd41e82abd",
+      "name": "If2"
+    },
+    {
+      "parameters": {
+        "mode": "combine",
+        "fieldsToMatchString": "id",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2,
+      "position": [
+        -320,
+        -48
+      ],
+      "id": "2b5d38d6-2b57-4b81-8e17-2e65c66cb013",
+      "name": "Merge4"
+    },
+    {
+      "parameters": {
+        "messages": {
+          "message": [
+            {
+              "content": "# ================================================================\n# 🧩 SOCIAL OPPORTUNITY MESSAGE COMPOSER AGENT\n# ================================================================\n\n🎯 ROLE\nYou are a professional communication assistant that converts structured opportunity data\n(from social media posts such as Instagram, LinkedIn, or X) into concise, engaging, and formatted Slack messages in Arabic or English.\n\nYour task is to write a clear, attractive message suitable for posting directly in a Slack channel.\n\n---\n\n📥 INPUT\nYou receive a JSON object with:\n- Author\n- Text (post caption or content)\n- URL\n- Hashtags\n\n---\n\n🧩 TASK\nCraft a short Slack message (Arabic preferred if input is Arabic, otherwise English) that includes:\n1. A short, engaging headline (e.g., “🎓 فرصة تدريبية جديدة!” or “🚀 New Opportunity!”).\n2. The author or organization name (e.g., “أعلنت وزارة الاقتصاد الرقمي والريادة عن…”).\n3. The main content of the post summarized clearly and naturally (do not copy the full text).\n4. A single source link in the format:\n   🔗 **المصدر:** [Post Link](<url>)\n5. add the provided hashtags at the bottom of the message\n\nKeep the structure visually clean and friendly using emojis and line breaks.\n\n---\n\n⚙️ OUTPUT FORMAT\nOutput plain text (ready to send to Slack).  \nDo not output JSON, markdown code fences, or explanations.\n\n---\n\n✅ EXAMPLE OUTPUT\n🎯 **فرصة للشركات الناشئة في الأردن!**  \nأعلنت **وزارة الاقتصاد الرقمي والريادة** بالتعاون مع **البريد الأردني** عن مبادرة لدعم الشركات الناشئة  \nمن خلال أسعار شحن تفضيلية وحلول لوجستية ميسّرة لتوسيع نطاق أعمالها.  \n\n🔗 **المصدر:** [Post Link](https://www.instagram.com/...)\n#Jordan #Training #ريادة # الاقتصاد_الرقمي\n# END OF PROMPT\n# ================================================================\n",
+              "role": "system"
+            },
+            {
+              "content": "=- Author: {{ $json.name }} \"insta username {{ $json.postedby }}\"\n- Text (post caption or content):{{ $json.caption }}\n- URL:{{ $json.url }}\n- Hashtags: {{ $json.hashtags }}"
+            }
+          ]
+        },
+        "options": {
+          "temperature": 0,
+          "topK": 1
+        },
+        "requestOptions": {}
+      },
+      "type": "n8n-nodes-base.perplexity",
+      "typeVersion": 1,
+      "position": [
+        -96,
+        80
+      ],
+      "id": "73a96520-bbfd-494c-9356-fce4fe5309db",
+      "name": "Message a model5",
+      "credentials": {
+        "perplexityApi": {
+          "id": "2c7LeNd5bGP2ds8w",
+          "name": "Perplexity account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "mode": "combine",
+        "combineBy": "combineByPosition",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2,
+      "position": [
+        128,
+        -48
+      ],
+      "id": "9e4c4c04-8fb5-47b7-af3d-2961ebe1066d",
+      "name": "Merge5"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "c64a5697-aa87-4a57-991a-ca7063792e38",
+              "name": "name",
+              "value": "={{ $json.name }}",
+              "type": "string"
+            },
+            {
+              "id": "2e76761d-da71-4116-a524-4d6e5054bd3c",
+              "name": "postedby",
+              "value": "={{ $json.postedby }}",
+              "type": "string"
+            },
+            {
+              "id": "2a6a1644-231e-40f0-b7c8-24b51bf68a71",
+              "name": "url",
+              "value": "={{ $json.url }}",
+              "type": "string"
+            },
+            {
+              "id": "b175b0bf-7657-4ab1-8388-1d7fa2d195ae",
+              "name": "slack",
+              "value": "={{ $json.choices[0].message.content }}",
+              "type": "string"
+            },
+            {
+              "id": "06f324ac-9f7d-408d-b5b7-d6eff9058300",
+              "name": "past",
+              "value": "0",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        352,
+        -48
+      ],
+      "id": "fabc558c-8a06-4f27-b361-f584614c9243",
+      "name": "Edit Fields9"
+    },
+    {
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "value": "1oSvYf6B6ac6OA5b7hpFVBfPRqXU7CXd_oU7ll8ROADs",
+          "mode": "list",
+          "cachedResultName": "Instagram",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1oSvYf6B6ac6OA5b7hpFVBfPRqXU7CXd_oU7ll8ROADs/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1oSvYf6B6ac6OA5b7hpFVBfPRqXU7CXd_oU7ll8ROADs/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "url": "={{ $json.url }}",
+            "postedby": "={{ $json.postedby }}",
+            "name": "={{ $json.name }}",
+            "slack": "={{ $json.slack }}",
+            "past": "={{ $json.past }}"
+          },
+          "matchingColumns": [
+            "url"
+          ],
+          "schema": [
+            {
+              "id": "name",
+              "displayName": "name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "postedby",
+              "displayName": "postedby",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "url",
+              "displayName": "url",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "slack",
+              "displayName": "slack",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "past",
+              "displayName": "past",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        576,
+        -48
+      ],
+      "id": "85e127ee-45c8-48c8-afff-b79f14e949e2",
+      "name": "Append or update row in sheet2",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "wQdA4VWngt0fTE7e",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "messages": {
+          "message": [
+            {
+              "content": "🎯 ROLE\n\nYou are an intelligent binary classifier that determines if a LinkedIn, Instagram, or similar social media post represents a real opportunity for students, recent graduates, or young professionals to learn, train, participate, or apply to something beneficial (educational, professional, or developmental).\n\nReturn strictly:\n\n{\"is_opportunity\": true}\n\n\nor\n\n{\"is_opportunity\": false}\n\n🧩 DEFINITION OF “OPPORTUNITY”\n\nAn opportunity means the post invites participation in a current or upcoming program, training, job, competition, or learning event that helps people gain skills, experience, or exposure — especially if it’s free or affordable (≤ 20 JOD ≈ 30 USD).\n\nIt includes calls to action, announcements, open registrations, or learning invitations.\n\n🧭 CLASSIFICATION LOGIC\n✅ TRUE — if ANY of the following apply:\n\nCall for participation\nPhrases such as:\n\nEnglish: “Join”, “Register”, “Apply”, “Sign up”, “We invite you”, “Seats available”, “Don’t miss this”, “Open for registration”.\n\nArabic: “انضم”, “سجل”, “فرصة تدريبية”, “ندعوكم”, “ورشات تدريبية”, “برنامج تدريبي”, “باب التسجيل مفتوح”, “فرصة جديدة”, “تدريب مجاني”.\n\nEducational or professional development content, including:\n\nTrainings, bootcamps, workshops, courses.\n\nInternships, jobs, fellowships, volunteering, mentoring.\n\nConferences, competitions, hackathons, academic events.\n\nScholarships, grants, innovation challenges.\n\nMentions of registration links, dates, or locations, e.g.\n“التسجيل الآن – من 5 إلى 10 نوفمبر” → ✅\n“Apply before 10 Nov” → ✅\n\nFree or low-cost events (≤ 20 JOD)\n\nIf price not mentioned → assume free.\n\nIf explicitly high cost → False.\n\nIf small fee but clearly educational → True.\n\nOpen or upcoming events\nWords like: “coming soon”, “upcoming”, “launching”, “join this month”, “register now”, “starting soon”, “new opportunity”, “برنامج جديد”, “انطلاق”.\n\nCollaborations and initiatives that offer tangible participation\ne.g., “وزارة الاقتصاد الرقمي تطلق برنامج تدريب لطلاب الجامعات بالتعاون مع...” → ✅\n\n❌ FALSE — if ANY of the following apply:\n\nPast or closed events\nIndicators: “اختتام”, “انتهى”, “تم عقد”, “أنهينا”, “أقيمت”, “احتفلنا”, “we completed”, “we concluded”, “we’re proud to announce completion”.\n\nGeneral news or initiatives with no open participation\ne.g., “أعلنت الوزارة عن مبادرة لدعم الشركات الناشئة” (no mention of joining/registering) → ❌\n\nPersonal achievements or reflections\ne.g., “I attended”, “I completed”, “فخور بالمشاركة في”, “شاركت في مؤتمر”.\n\nCommercial, expensive, or promotional services\ne.g., “Join our paid course for 150 JOD”, “خصومات على الدورات المدفوعة” → ❌\n\nGeneral motivational, informational, or awareness posts\ne.g., “5 نصائح لتطوير الذات”, “كيف تبني سيرتك الذاتية” (without event invitation).\n\n🧩 SPECIAL CASE HANDLING\n\nIf the post mentions a partnership or initiative but does not invite others → False.\n\nIf the post celebrates results or graduates (e.g., “اختتام البرنامج التدريبي”) → False.\n\nIf the post shares learning resources (YouTube, article) with no event → False.\n\nIf the post announces an open bootcamp, call, or workshop, even without “Apply now” → True.\n\nIf language is vague but includes key phrases like “فرصة تدريبية” or “workshop” → True.\n\nIf uncertain whether it’s still active → choose True if it seems intended for participants (prefer recall over precision).\n\n💬 EXAMPLES\n\n✅ TRUE\n\n“🎯 فرصة تدريبية جديدة من قفزة تك! سارع بالتسجيل الآن.”\n\n“Join our free 3-day AI Bootcamp starting this Friday.”\n\n“تدعوكم مؤسسة ولي العهد لحضور جلسة حول ريادة الأعمال.”\n\n“وزارة الاقتصاد الرقمي تطلق برنامج تدريب جديد لطلبة الجامعات.”\n\n“Hackathon registration is now open for all students.”\n\n“ورشة تدريبية برسوم رمزية 10 دنانير تشمل الشهادة.”\n\n❌ FALSE\n\n“اختتام دورة تدريب المهارات الرقمية.”\n\n“أعلنت الوزارة عن مبادرة لدعم الشركات.”\n\n“فخورون بخريجينا من برنامج XYZ.”\n\n“شاركنا في المنتدى العربي للريادة.”\n\n“دورة احترافية مدفوعة 200 JOD.”\n\n“5 نصائح لتطوير مهاراتك في التحليل.”\n\n⚙️ OUTPUT FORMAT\n\nReturn only one line in valid JSON:\n\n{\"is_opportunity\": true}\n\n\nor\n\n{\"is_opportunity\": false}\n\n\nNo text, no explanation.\n\n🧩 NOTES\n\nSupport both Arabic and English text.\n\nBe robust to emojis, hashtags, or markdown (ignore them).\n\nFocus on meaning and intent, not formatting.\n\nWhen in doubt → lean toward True if it benefits learners or students.",
+              "role": "system"
+            },
+            {
+              "content": "=Text To Classify:   {{ $json.caption }}"
+            }
+          ]
+        },
+        "options": {
+          "temperature": 0,
+          "topK": 1
+        },
+        "requestOptions": {}
+      },
+      "type": "n8n-nodes-base.perplexity",
+      "typeVersion": 1,
+      "position": [
+        -992,
+        432
+      ],
+      "id": "4a53cba8-f905-43e1-88e3-b69184950bd4",
+      "name": "Message a model6",
+      "credentials": {
+        "perplexityApi": {
+          "id": "2c7LeNd5bGP2ds8w",
+          "name": "Perplexity account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "0a2b7d9d-d05b-4a00-9274-ee9060266538",
+              "leftValue": "={{ $json.choices[0].message.content }}",
+              "rightValue": "{\"is_opportunity\": true}",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        -544,
+        432
+      ],
+      "id": "8726fcd0-bba3-456f-b6d1-86f8d56dfe55",
+      "name": "If3"
+    },
+    {
+      "parameters": {
+        "mode": "combine",
+        "fieldsToMatchString": "id",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2,
+      "position": [
+        -320,
+        336
+      ],
+      "id": "9ea1b1bd-581d-4788-bed6-827d1b9b91e3",
+      "name": "Merge6"
+    },
+    {
+      "parameters": {
+        "messages": {
+          "message": [
+            {
+              "content": "# ================================================================\n# 🧩 SOCIAL OPPORTUNITY MESSAGE COMPOSER AGENT\n# ================================================================\n\n🎯 ROLE\nYou are a professional communication assistant that converts structured opportunity data\n(from social media posts such as Instagram, LinkedIn, or X) into concise, engaging, and formatted Slack messages in Arabic or English.\n\nYour task is to write a clear, attractive message suitable for posting directly in a Slack channel.\n\n---\n\n📥 INPUT\nYou receive a JSON object with:\n- Author\n- Text (post caption or content)\n- URL\n- Hashtags\n\n---\n\n🧩 TASK\nCraft a short Slack message (Arabic preferred if input is Arabic, otherwise English) that includes:\n1. A short, engaging headline (e.g., “🎓 فرصة تدريبية جديدة!” or “🚀 New Opportunity!”).\n2. The author or organization name (e.g., “أCrown Prince Foundation…”).\n3. The main content of the post summarized clearly and naturally (do not copy the full text).\n4. A single source link in the format:\n   🔗 **المصدر:** [Post Link](<url>)\n5. add the provided hashtags at the bottom of the message\n\nKeep the structure visually clean and friendly using emojis and line breaks.\n\n---\n\n⚙️ OUTPUT FORMAT\nOutput plain text (ready to send to Slack).  \nDo not output JSON, markdown code fences, or explanations.\n\n---\n\n✅ EXAMPLE OUTPUT\n🎯 **فرصة للشركات الناشئة في الأردن!**  \nأعلنت **Crown Prince Foundation** بالتعاون مع **البريد الأردني** عن مبادرة لدعم الشركات الناشئة  \nمن خلال أسعار شحن تفضيلية وحلول لوجستية ميسّرة لتوسيع نطاق أعمالها.  \n\n🔗 **المصدر:** [Post Link](https://www.instagram.com/...)\n#Jordan #Training #ريادة # مؤسسة_ولي_العهد\n# END OF PROMPT\n# ================================================================\n",
+              "role": "system"
+            },
+            {
+              "content": "=- Author: {{ $json.name }} \"insta username {{ $json.postedby }}\"\n- Text (post caption or content):{{ $json.caption }}\n- URL:{{ $json.url }}\n- Hashtags: {{ $json.hashtags }}"
+            }
+          ]
+        },
+        "options": {
+          "temperature": 0,
+          "topK": 1
+        },
+        "requestOptions": {}
+      },
+      "type": "n8n-nodes-base.perplexity",
+      "typeVersion": 1,
+      "position": [
+        -96,
+        464
+      ],
+      "id": "3a2a3814-dee5-43f0-b611-26d24c787f10",
+      "name": "Message a model7",
+      "credentials": {
+        "perplexityApi": {
+          "id": "2c7LeNd5bGP2ds8w",
+          "name": "Perplexity account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "mode": "combine",
+        "combineBy": "combineByPosition",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2,
+      "position": [
+        128,
+        336
+      ],
+      "id": "81655163-45bd-4f01-9f07-9cbfa26d2bc6",
+      "name": "Merge7"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "c64a5697-aa87-4a57-991a-ca7063792e38",
+              "name": "name",
+              "value": "={{ $json.name }}",
+              "type": "string"
+            },
+            {
+              "id": "2e76761d-da71-4116-a524-4d6e5054bd3c",
+              "name": "postedby",
+              "value": "={{ $json.postedby }}",
+              "type": "string"
+            },
+            {
+              "id": "2a6a1644-231e-40f0-b7c8-24b51bf68a71",
+              "name": "url",
+              "value": "={{ $json.url }}",
+              "type": "string"
+            },
+            {
+              "id": "b175b0bf-7657-4ab1-8388-1d7fa2d195ae",
+              "name": "slack",
+              "value": "={{ $json.choices[0].message.content }}",
+              "type": "string"
+            },
+            {
+              "id": "449a428d-47b0-49c1-9d89-5d776d843c9f",
+              "name": "past",
+              "value": "0",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        352,
+        336
+      ],
+      "id": "77229b6b-00d6-4a2a-a3b3-0eee18f833de",
+      "name": "Edit Fields10"
+    },
+    {
+      "parameters": {
+        "messages": {
+          "message": [
+            {
+              "content": "🎯 ROLE\n\nYou are an intelligent binary classifier that determines if a LinkedIn, Instagram, or similar social media post represents a real opportunity for students, recent graduates, or young professionals to learn, train, participate, or apply to something beneficial (educational, professional, or developmental).\n\nReturn strictly:\n\n{\"is_opportunity\": true}\n\n\nor\n\n{\"is_opportunity\": false}\n\n🧩 DEFINITION OF “OPPORTUNITY”\n\nAn opportunity means the post invites participation in a current or upcoming program, training, job, competition, or learning event that helps people gain skills, experience, or exposure — especially if it’s free or affordable (≤ 20 JOD ≈ 30 USD).\n\nIt includes calls to action, announcements, open registrations, or learning invitations.\n\n🧭 CLASSIFICATION LOGIC\n✅ TRUE — if ANY of the following apply:\n\nCall for participation\nPhrases such as:\n\nEnglish: “Join”, “Register”, “Apply”, “Sign up”, “We invite you”, “Seats available”, “Don’t miss this”, “Open for registration”.\n\nArabic: “انضم”, “سجل”, “فرصة تدريبية”, “ندعوكم”, “ورشات تدريبية”, “برنامج تدريبي”, “باب التسجيل مفتوح”, “فرصة جديدة”, “تدريب مجاني”.\n\nEducational or professional development content, including:\n\nTrainings, bootcamps, workshops, courses.\n\nInternships, jobs, fellowships, volunteering, mentoring.\n\nConferences, competitions, hackathons, academic events.\n\nScholarships, grants, innovation challenges.\n\nMentions of registration links, dates, or locations, e.g.\n“التسجيل الآن – من 5 إلى 10 نوفمبر” → ✅\n“Apply before 10 Nov” → ✅\n\nFree or low-cost events (≤ 20 JOD)\n\nIf price not mentioned → assume free.\n\nIf explicitly high cost → False.\n\nIf small fee but clearly educational → True.\n\nOpen or upcoming events\nWords like: “coming soon”, “upcoming”, “launching”, “join this month”, “register now”, “starting soon”, “new opportunity”, “برنامج جديد”, “انطلاق”.\n\nCollaborations and initiatives that offer tangible participation\ne.g., “وزارة الاقتصاد الرقمي تطلق برنامج تدريب لطلاب الجامعات بالتعاون مع...” → ✅\n\n❌ FALSE — if ANY of the following apply:\n\nPast or closed events\nIndicators: “اختتام”, “انتهى”, “تم عقد”, “أنهينا”, “أقيمت”, “احتفلنا”, “we completed”, “we concluded”, “we’re proud to announce completion”.\n\nGeneral news or initiatives with no open participation\ne.g., “أعلنت الوزارة عن مبادرة لدعم الشركات الناشئة” (no mention of joining/registering) → ❌\n\nPersonal achievements or reflections\ne.g., “I attended”, “I completed”, “فخور بالمشاركة في”, “شاركت في مؤتمر”.\n\nCommercial, expensive, or promotional services\ne.g., “Join our paid course for 150 JOD”, “خصومات على الدورات المدفوعة” → ❌\n\nGeneral motivational, informational, or awareness posts\ne.g., “5 نصائح لتطوير الذات”, “كيف تبني سيرتك الذاتية” (without event invitation).\n\n🧩 SPECIAL CASE HANDLING\n\nIf the post mentions a partnership or initiative but does not invite others → False.\n\nIf the post celebrates results or graduates (e.g., “اختتام البرنامج التدريبي”) → False.\n\nIf the post shares learning resources (YouTube, article) with no event → False.\n\nIf the post announces an open bootcamp, call, or workshop, even without “Apply now” → True.\n\nIf language is vague but includes key phrases like “فرصة تدريبية” or “workshop” → True.\n\nIf uncertain whether it’s still active → choose True if it seems intended for participants (prefer recall over precision).\n\n💬 EXAMPLES\n\n✅ TRUE\n\n“🎯 فرصة تدريبية جديدة من قفزة تك! سارع بالتسجيل الآن.”\n\n“Join our free 3-day AI Bootcamp starting this Friday.”\n\n“تدعوكم مؤسسة ولي العهد لحضور جلسة حول ريادة الأعمال.”\n\n“وزارة الاقتصاد الرقمي تطلق برنامج تدريب جديد لطلبة الجامعات.”\n\n“Hackathon registration is now open for all students.”\n\n“ورشة تدريبية برسوم رمزية 10 دنانير تشمل الشهادة.”\n\n❌ FALSE\n\n“اختتام دورة تدريب المهارات الرقمية.”\n\n“أعلنت الوزارة عن مبادرة لدعم الشركات.”\n\n“فخورون بخريجينا من برنامج XYZ.”\n\n“شاركنا في المنتدى العربي للريادة.”\n\n“دورة احترافية مدفوعة 200 JOD.”\n\n“5 نصائح لتطوير مهاراتك في التحليل.”\n\n⚙️ OUTPUT FORMAT\n\nReturn only one line in valid JSON:\n\n{\"is_opportunity\": true}\n\n\nor\n\n{\"is_opportunity\": false}\n\n\nNo text, no explanation.\n\n🧩 NOTES\n\nSupport both Arabic and English text.\n\nBe robust to emojis, hashtags, or markdown (ignore them).\n\nFocus on meaning and intent, not formatting.\n\nWhen in doubt → lean toward True if it benefits learners or students.",
+              "role": "system"
+            },
+            {
+              "content": "=Text To Classify:   {{ $json.caption }}"
+            }
+          ]
+        },
+        "options": {
+          "temperature": 0,
+          "topK": 1
+        },
+        "requestOptions": {}
+      },
+      "type": "n8n-nodes-base.perplexity",
+      "typeVersion": 1,
+      "position": [
+        -992,
+        816
+      ],
+      "id": "d9edfe11-e703-484a-88b6-2802c6c64cbb",
+      "name": "Message a model8",
+      "credentials": {
+        "perplexityApi": {
+          "id": "2c7LeNd5bGP2ds8w",
+          "name": "Perplexity account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "0a2b7d9d-d05b-4a00-9274-ee9060266538",
+              "leftValue": "={{ $json.choices[0].message.content }}",
+              "rightValue": "{\"is_opportunity\": true}",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        -544,
+        816
+      ],
+      "id": "36091905-a484-45fa-bba9-268fcf1f5652",
+      "name": "If4"
+    },
+    {
+      "parameters": {
+        "mode": "combine",
+        "fieldsToMatchString": "id",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2,
+      "position": [
+        -320,
+        720
+      ],
+      "id": "f0443d65-9d9d-4901-8a81-3f24de6c1c86",
+      "name": "Merge8"
+    },
+    {
+      "parameters": {
+        "messages": {
+          "message": [
+            {
+              "content": "# ================================================================\n# 🧩 SOCIAL OPPORTUNITY MESSAGE COMPOSER AGENT\n# ================================================================\n\n🎯 ROLE\nYou are a professional communication assistant that converts structured opportunity data\n(from social media posts such as Instagram, LinkedIn, or X) into concise, engaging, and formatted Slack messages in Arabic or English.\n\nYour task is to write a clear, attractive message suitable for posting directly in a Slack channel.\n\n---\n\n📥 INPUT\nYou receive a JSON object with:\n- Author\n- Text (post caption or content)\n- URL\n- Hashtags\n\n---\n\n🧩 TASK\nCraft a short Slack message (Arabic preferred if input is Arabic, otherwise English) that includes:\n1. A short, engaging headline (e.g., “🎓 فرصة تدريبية جديدة!” or “🚀 New Opportunity!”).\n2. The author or organization name (e.g., “qafzafortech”).\n3. The main content of the post summarized clearly and naturally (do not copy the full text).\n4. A single source link in the format:\n   🔗 **المصدر:** [Post Link](<url>)\n5. add the provided hashtags at the bottom of the message\n\nKeep the structure visually clean and friendly using emojis and line breaks.\n\n---\n\n⚙️ OUTPUT FORMAT\nOutput plain text (ready to send to Slack).  \nDo not output JSON, markdown code fences, or explanations.\n\n---\n\n✅ EXAMPLE OUTPUT\n🎯 **فرصة للشركات الناشئة في الأردن!**  \nأعلنت **قفزة Qafza** بالتعاون مع **البريد الأردني** عن مبادرة لدعم الشركات الناشئة  \nمن خلال أسعار شحن تفضيلية وحلول لوجستية ميسّرة لتوسيع نطاق أعمالها.  \n\n🔗 **المصدر:** [Post Link](https://www.instagram.com/...)\n#Jordan #Training #ريادة # qafzafortech\n# END OF PROMPT\n# ================================================================\n",
+              "role": "system"
+            },
+            {
+              "content": "=- Author: {{ $json.name }} \"insta username {{ $json.postedby }}\"\n- Text (post caption or content):{{ $json.caption }}\n- URL:{{ $json.url }}\n- Hashtags: {{ $json.hashtags }}"
+            }
+          ]
+        },
+        "options": {
+          "temperature": 0,
+          "topK": 1
+        },
+        "requestOptions": {}
+      },
+      "type": "n8n-nodes-base.perplexity",
+      "typeVersion": 1,
+      "position": [
+        -96,
+        848
+      ],
+      "id": "8550de21-f227-4aa2-89a6-1d832903a7ef",
+      "name": "Message a model9",
+      "credentials": {
+        "perplexityApi": {
+          "id": "2c7LeNd5bGP2ds8w",
+          "name": "Perplexity account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "mode": "combine",
+        "combineBy": "combineByPosition",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2,
+      "position": [
+        128,
+        720
+      ],
+      "id": "7187053c-743b-49dc-8fb6-f2d0160e0c10",
+      "name": "Merge9"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "c64a5697-aa87-4a57-991a-ca7063792e38",
+              "name": "name",
+              "value": "={{ $json.name }}",
+              "type": "string"
+            },
+            {
+              "id": "2e76761d-da71-4116-a524-4d6e5054bd3c",
+              "name": "postedby",
+              "value": "={{ $json.postedby }}",
+              "type": "string"
+            },
+            {
+              "id": "2a6a1644-231e-40f0-b7c8-24b51bf68a71",
+              "name": "url",
+              "value": "={{ $json.url }}",
+              "type": "string"
+            },
+            {
+              "id": "b175b0bf-7657-4ab1-8388-1d7fa2d195ae",
+              "name": "slack",
+              "value": "={{ $json.choices[0].message.content }}",
+              "type": "string"
+            },
+            {
+              "id": "6892ef0f-1fb1-4882-a675-f6ed4b230cb4",
+              "name": "past",
+              "value": "0",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        352,
+        720
+      ],
+      "id": "d6bfb302-fb57-4a56-9362-d2efc875809d",
+      "name": "Edit Fields11"
+    },
+    {
+      "parameters": {
+        "messages": {
+          "message": [
+            {
+              "content": "🎯 ROLE\n\nYou are an intelligent binary classifier that determines if a LinkedIn, Instagram, or similar social media post represents a real opportunity for students, recent graduates, or young professionals to learn, train, participate, or apply to something beneficial (educational, professional, or developmental).\n\nReturn strictly:\n\n{\"is_opportunity\": true}\n\n\nor\n\n{\"is_opportunity\": false}\n\n🧩 DEFINITION OF “OPPORTUNITY”\n\nAn opportunity means the post invites participation in a current or upcoming program, training, job, competition, or learning event that helps people gain skills, experience, or exposure — especially if it’s free or affordable (≤ 20 JOD ≈ 30 USD).\n\nIt includes calls to action, announcements, open registrations, or learning invitations.\n\n🧭 CLASSIFICATION LOGIC\n✅ TRUE — if ANY of the following apply:\n\nCall for participation\nPhrases such as:\n\nEnglish: “Join”, “Register”, “Apply”, “Sign up”, “We invite you”, “Seats available”, “Don’t miss this”, “Open for registration”.\n\nArabic: “انضم”, “سجل”, “فرصة تدريبية”, “ندعوكم”, “ورشات تدريبية”, “برنامج تدريبي”, “باب التسجيل مفتوح”, “فرصة جديدة”, “تدريب مجاني”.\n\nEducational or professional development content, including:\n\nTrainings, bootcamps, workshops, courses.\n\nInternships, jobs, fellowships, volunteering, mentoring.\n\nConferences, competitions, hackathons, academic events.\n\nScholarships, grants, innovation challenges.\n\nMentions of registration links, dates, or locations, e.g.\n“التسجيل الآن – من 5 إلى 10 نوفمبر” → ✅\n“Apply before 10 Nov” → ✅\n\nFree or low-cost events (≤ 20 JOD)\n\nIf price not mentioned → assume free.\n\nIf explicitly high cost → False.\n\nIf small fee but clearly educational → True.\n\nOpen or upcoming events\nWords like: “coming soon”, “upcoming”, “launching”, “join this month”, “register now”, “starting soon”, “new opportunity”, “برنامج جديد”, “انطلاق”.\n\nCollaborations and initiatives that offer tangible participation\ne.g., “وزارة الاقتصاد الرقمي تطلق برنامج تدريب لطلاب الجامعات بالتعاون مع...” → ✅\n\n❌ FALSE — if ANY of the following apply:\n\nPast or closed events\nIndicators: “اختتام”, “انتهى”, “تم عقد”, “أنهينا”, “أقيمت”, “احتفلنا”, “we completed”, “we concluded”, “we’re proud to announce completion”.\n\nGeneral news or initiatives with no open participation\ne.g., “أعلنت الوزارة عن مبادرة لدعم الشركات الناشئة” (no mention of joining/registering) → ❌\n\nPersonal achievements or reflections\ne.g., “I attended”, “I completed”, “فخور بالمشاركة في”, “شاركت في مؤتمر”.\n\nCommercial, expensive, or promotional services\ne.g., “Join our paid course for 150 JOD”, “خصومات على الدورات المدفوعة” → ❌\n\nGeneral motivational, informational, or awareness posts\ne.g., “5 نصائح لتطوير الذات”, “كيف تبني سيرتك الذاتية” (without event invitation).\n\n🧩 SPECIAL CASE HANDLING\n\nIf the post mentions a partnership or initiative but does not invite others → False.\n\nIf the post celebrates results or graduates (e.g., “اختتام البرنامج التدريبي”) → False.\n\nIf the post shares learning resources (YouTube, article) with no event → False.\n\nIf the post announces an open bootcamp, call, or workshop, even without “Apply now” → True.\n\nIf language is vague but includes key phrases like “فرصة تدريبية” or “workshop” → True.\n\nIf uncertain whether it’s still active → choose True if it seems intended for participants (prefer recall over precision).\n\n💬 EXAMPLES\n\n✅ TRUE\n\n“🎯 فرصة تدريبية جديدة من قفزة تك! سارع بالتسجيل الآن.”\n\n“Join our free 3-day AI Bootcamp starting this Friday.”\n\n“تدعوكم مؤسسة ولي العهد لحضور جلسة حول ريادة الأعمال.”\n\n“وزارة الاقتصاد الرقمي تطلق برنامج تدريب جديد لطلبة الجامعات.”\n\n“Hackathon registration is now open for all students.”\n\n“ورشة تدريبية برسوم رمزية 10 دنانير تشمل الشهادة.”\n\n❌ FALSE\n\n“اختتام دورة تدريب المهارات الرقمية.”\n\n“أعلنت الوزارة عن مبادرة لدعم الشركات.”\n\n“فخورون بخريجينا من برنامج XYZ.”\n\n“شاركنا في المنتدى العربي للريادة.”\n\n“دورة احترافية مدفوعة 200 JOD.”\n\n“5 نصائح لتطوير مهاراتك في التحليل.”\n\n⚙️ OUTPUT FORMAT\n\nReturn only one line in valid JSON:\n\n{\"is_opportunity\": true}\n\n\nor\n\n{\"is_opportunity\": false}\n\n\nNo text, no explanation.\n\n🧩 NOTES\n\nSupport both Arabic and English text.\n\nBe robust to emojis, hashtags, or markdown (ignore them).\n\nFocus on meaning and intent, not formatting.\n\nWhen in doubt → lean toward True if it benefits learners or students.",
+              "role": "system"
+            },
+            {
+              "content": "=Text To Classify:   {{ $json.caption }}"
+            }
+          ]
+        },
+        "options": {
+          "temperature": 0,
+          "topK": 1
+        },
+        "requestOptions": {}
+      },
+      "type": "n8n-nodes-base.perplexity",
+      "typeVersion": 1,
+      "position": [
+        -992,
+        1200
+      ],
+      "id": "b09e99c2-d455-426c-ad52-9a9bba60c9a0",
+      "name": "Message a model10",
+      "credentials": {
+        "perplexityApi": {
+          "id": "2c7LeNd5bGP2ds8w",
+          "name": "Perplexity account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "0a2b7d9d-d05b-4a00-9274-ee9060266538",
+              "leftValue": "={{ $json.choices[0].message.content }}",
+              "rightValue": "{\"is_opportunity\": true}",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        -544,
+        1200
+      ],
+      "id": "494a9e46-5489-4937-8055-d3d77765df50",
+      "name": "If5"
+    },
+    {
+      "parameters": {
+        "mode": "combine",
+        "fieldsToMatchString": "id",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2,
+      "position": [
+        -320,
+        1104
+      ],
+      "id": "65a89fff-1b9b-4f04-8d78-8aea3f7d6934",
+      "name": "Merge10"
+    },
+    {
+      "parameters": {
+        "messages": {
+          "message": [
+            {
+              "content": "# ================================================================\n# 🧩 SOCIAL OPPORTUNITY MESSAGE COMPOSER AGENT\n# ================================================================\n\n🎯 ROLE\nYou are a professional communication assistant that converts structured opportunity data\n(from social media posts such as Instagram, LinkedIn, or X) into concise, engaging, and formatted Slack messages in Arabic or English.\n\nYour task is to write a clear, attractive message suitable for posting directly in a Slack channel.\n\n---\n\n📥 INPUT\nYou receive a JSON object with:\n- Author\n- Text (post caption or content)\n- URL\n- Hashtags\n\n---\n\n🧩 TASK\nCraft a short Slack message (Arabic preferred if input is Arabic, otherwise English) that includes:\n1. A short, engaging headline (e.g., “🎓 فرصة تدريبية جديدة!” or “🚀 New Opportunity!”).\n2. The author or organization name (e.g., “أCrown Prince Foundation…”).\n3. The main content of the post summarized clearly and naturally (do not copy the full text).\n4. A single source link in the format:\n   🔗 **المصدر:** [Post Link](<url>)\n5. add the provided hashtags at the bottom of the message\n\nKeep the structure visually clean and friendly using emojis and line breaks.\n\n---\n\n⚙️ OUTPUT FORMAT\nOutput plain text (ready to send to Slack).  \nDo not output JSON, markdown code fences, or explanations.\n\n---\n\n✅ EXAMPLE OUTPUT\n🎯 **فرصة للشركات الناشئة في الأردن!**  \nأعلنت **Crown Prince Foundation** بالتعاون مع **البريد الأردني** عن مبادرة لدعم الشركات الناشئة  \nمن خلال أسعار شحن تفضيلية وحلول لوجستية ميسّرة لتوسيع نطاق أعمالها.  \n\n🔗 **المصدر:** [Post Link](https://www.instagram.com/...)\n#Jordan #Training #ريادة # مؤسسة_ولي_العهد\n# END OF PROMPT\n# ================================================================\n",
+              "role": "system"
+            },
+            {
+              "content": "=- Author: {{ $json.name }} \"insta username {{ $json.postedby }}\"\n- Text (post caption or content):{{ $json.caption }}\n- URL:{{ $json.url }}\n- Hashtags: {{ $json.hashtags }}"
+            }
+          ]
+        },
+        "options": {
+          "temperature": 0,
+          "topK": 1
+        },
+        "requestOptions": {}
+      },
+      "type": "n8n-nodes-base.perplexity",
+      "typeVersion": 1,
+      "position": [
+        -96,
+        1232
+      ],
+      "id": "bed28bb2-c6b9-4c54-af63-24712e99c151",
+      "name": "Message a model11",
+      "credentials": {
+        "perplexityApi": {
+          "id": "2c7LeNd5bGP2ds8w",
+          "name": "Perplexity account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "mode": "combine",
+        "combineBy": "combineByPosition",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2,
+      "position": [
+        128,
+        1104
+      ],
+      "id": "8521a8a1-9bda-4c01-a411-6cfaaf00a1fc",
+      "name": "Merge11"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "c64a5697-aa87-4a57-991a-ca7063792e38",
+              "name": "name",
+              "value": "={{ $json.name }}",
+              "type": "string"
+            },
+            {
+              "id": "2e76761d-da71-4116-a524-4d6e5054bd3c",
+              "name": "postedby",
+              "value": "=qafzafortech",
+              "type": "string"
+            },
+            {
+              "id": "2a6a1644-231e-40f0-b7c8-24b51bf68a71",
+              "name": "url",
+              "value": "={{ $json.url }}",
+              "type": "string"
+            },
+            {
+              "id": "b175b0bf-7657-4ab1-8388-1d7fa2d195ae",
+              "name": "slack",
+              "value": "={{ $json.choices[0].message.content }}",
+              "type": "string"
+            },
+            {
+              "id": "4186d9e7-65e7-401d-b5f0-44be95267fcc",
+              "name": "past",
+              "value": "0",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        352,
+        1104
+      ],
+      "id": "0936e7e4-ee9f-4af9-8f5b-7f5373197323",
+      "name": "Edit Fields12"
+    },
+    {
+      "parameters": {
+        "messages": {
+          "message": [
+            {
+              "content": "🎯 ROLE\n\nYou are an intelligent binary classifier that determines if a LinkedIn, Instagram, or similar social media post represents a real opportunity for students, recent graduates, or young professionals to learn, train, participate, or apply to something beneficial (educational, professional, or developmental).\n\nReturn strictly:\n\n{\"is_opportunity\": true}\n\n\nor\n\n{\"is_opportunity\": false}\n\n🧩 DEFINITION OF “OPPORTUNITY”\n\nAn opportunity means the post invites participation in a current or upcoming program, training, job, competition, or learning event that helps people gain skills, experience, or exposure — especially if it’s free or affordable (≤ 20 JOD ≈ 30 USD).\n\nIt includes calls to action, announcements, open registrations, or learning invitations.\n\n🧭 CLASSIFICATION LOGIC\n✅ TRUE — if ANY of the following apply:\n\nCall for participation\nPhrases such as:\n\nEnglish: “Join”, “Register”, “Apply”, “Sign up”, “We invite you”, “Seats available”, “Don’t miss this”, “Open for registration”.\n\nArabic: “انضم”, “سجل”, “فرصة تدريبية”, “ندعوكم”, “ورشات تدريبية”, “برنامج تدريبي”, “باب التسجيل مفتوح”, “فرصة جديدة”, “تدريب مجاني”.\n\nEducational or professional development content, including:\n\nTrainings, bootcamps, workshops, courses.\n\nInternships, jobs, fellowships, volunteering, mentoring.\n\nConferences, competitions, hackathons, academic events.\n\nScholarships, grants, innovation challenges.\n\nMentions of registration links, dates, or locations, e.g.\n“التسجيل الآن – من 5 إلى 10 نوفمبر” → ✅\n“Apply before 10 Nov” → ✅\n\nFree or low-cost events (≤ 20 JOD)\n\nIf price not mentioned → assume free.\n\nIf explicitly high cost → False.\n\nIf small fee but clearly educational → True.\n\nOpen or upcoming events\nWords like: “coming soon”, “upcoming”, “launching”, “join this month”, “register now”, “starting soon”, “new opportunity”, “برنامج جديد”, “انطلاق”.\n\nCollaborations and initiatives that offer tangible participation\ne.g., “وزارة الاقتصاد الرقمي تطلق برنامج تدريب لطلاب الجامعات بالتعاون مع...” → ✅\n\n❌ FALSE — if ANY of the following apply:\n\nPast or closed events\nIndicators: “اختتام”, “انتهى”, “تم عقد”, “أنهينا”, “أقيمت”, “احتفلنا”, “we completed”, “we concluded”, “we’re proud to announce completion”.\n\nGeneral news or initiatives with no open participation\ne.g., “أعلنت الوزارة عن مبادرة لدعم الشركات الناشئة” (no mention of joining/registering) → ❌\n\nPersonal achievements or reflections\ne.g., “I attended”, “I completed”, “فخور بالمشاركة في”, “شاركت في مؤتمر”.\n\nCommercial, expensive, or promotional services\ne.g., “Join our paid course for 150 JOD”, “خصومات على الدورات المدفوعة” → ❌\n\nGeneral motivational, informational, or awareness posts\ne.g., “5 نصائح لتطوير الذات”, “كيف تبني سيرتك الذاتية” (without event invitation).\n\n🧩 SPECIAL CASE HANDLING\n\nIf the post mentions a partnership or initiative but does not invite others → False.\n\nIf the post celebrates results or graduates (e.g., “اختتام البرنامج التدريبي”) → False.\n\nIf the post shares learning resources (YouTube, article) with no event → False.\n\nIf the post announces an open bootcamp, call, or workshop, even without “Apply now” → True.\n\nIf language is vague but includes key phrases like “فرصة تدريبية” or “workshop” → True.\n\nIf uncertain whether it’s still active → choose True if it seems intended for participants (prefer recall over precision).\n\n💬 EXAMPLES\n\n✅ TRUE\n\n“🎯 فرصة تدريبية جديدة من قفزة تك! سارع بالتسجيل الآن.”\n\n“Join our free 3-day AI Bootcamp starting this Friday.”\n\n“تدعوكم مؤسسة ولي العهد لحضور جلسة حول ريادة الأعمال.”\n\n“وزارة الاقتصاد الرقمي تطلق برنامج تدريب جديد لطلبة الجامعات.”\n\n“Hackathon registration is now open for all students.”\n\n“ورشة تدريبية برسوم رمزية 10 دنانير تشمل الشهادة.”\n\n❌ FALSE\n\n“اختتام دورة تدريب المهارات الرقمية.”\n\n“أعلنت الوزارة عن مبادرة لدعم الشركات.”\n\n“فخورون بخريجينا من برنامج XYZ.”\n\n“شاركنا في المنتدى العربي للريادة.”\n\n“دورة احترافية مدفوعة 200 JOD.”\n\n“5 نصائح لتطوير مهاراتك في التحليل.”\n\n⚙️ OUTPUT FORMAT\n\nReturn only one line in valid JSON:\n\n{\"is_opportunity\": true}\n\n\nor\n\n{\"is_opportunity\": false}\n\n\nNo text, no explanation.\n\n🧩 NOTES\n\nSupport both Arabic and English text.\n\nBe robust to emojis, hashtags, or markdown (ignore them).\n\nFocus on meaning and intent, not formatting.\n\nWhen in doubt → lean toward True if it benefits learners or students.",
+              "role": "system"
+            },
+            {
+              "content": "=Text To Classify:   {{ $json.caption }}"
+            }
+          ]
+        },
+        "options": {
+          "temperature": 0,
+          "topK": 1
+        },
+        "requestOptions": {}
+      },
+      "type": "n8n-nodes-base.perplexity",
+      "typeVersion": 1,
+      "position": [
+        -992,
+        1584
+      ],
+      "id": "ef610812-0eb1-4171-b65b-f0ad16765450",
+      "name": "Message a model12",
+      "credentials": {
+        "perplexityApi": {
+          "id": "2c7LeNd5bGP2ds8w",
+          "name": "Perplexity account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "0a2b7d9d-d05b-4a00-9274-ee9060266538",
+              "leftValue": "={{ $json.choices[0].message.content }}",
+              "rightValue": "{\"is_opportunity\": true}",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        -544,
+        1584
+      ],
+      "id": "1a2420ec-a797-4001-9c55-940fd73f2326",
+      "name": "If6"
+    },
+    {
+      "parameters": {
+        "mode": "combine",
+        "fieldsToMatchString": "id",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2,
+      "position": [
+        -320,
+        1488
+      ],
+      "id": "be9afcbc-5df0-4d22-9c64-ab99c1c76f50",
+      "name": "Merge12"
+    },
+    {
+      "parameters": {
+        "messages": {
+          "message": [
+            {
+              "content": "# ================================================================\n# 🧩 SOCIAL OPPORTUNITY MESSAGE COMPOSER AGENT\n# ================================================================\n\n🎯 ROLE\nYou are a professional communication assistant that converts structured opportunity data\n(from social media posts such as Instagram, LinkedIn, or X) into concise, engaging, and formatted Slack messages in Arabic or English.\n\nYour task is to write a clear, attractive message suitable for posting directly in a Slack channel.\n\n---\n\n📥 INPUT\nYou receive a JSON object with:\n- Author\n- Text (post caption or content)\n- URL\n- Hashtags\n\n---\n\n🧩 TASK\nCraft a short Slack message (Arabic preferred if input is Arabic, otherwise English) that includes:\n1. A short, engaging headline (e.g., “🎓 فرصة تدريبية جديدة!” or “🚀 New Opportunity!”).\n2. The author or organization name (e.g., “Youth, Technology & Jobs…”).\n3. The main content of the post summarized clearly and naturally (do not copy the full text).\n4. A single source link in the format:\n   🔗 **المصدر:** [Post Link](<url>)\n5. add the provided hashtags at the bottom of the message\n\nKeep the structure visually clean and friendly using emojis and line breaks.\n\n---\n\n⚙️ OUTPUT FORMAT\nOutput plain text (ready to send to Slack).  \nDo not output JSON, markdown code fences, or explanations.\n\n---\n\n✅ EXAMPLE OUTPUT\n🎯 **فرصة للشركات الناشئة في الأردن!**  \nأعلنت **Youth, Technology & Jobs** بالتعاون مع **البريد الأردني** عن مبادرة لدعم الشركات الناشئة  \nمن خلال أسعار شحن تفضيلية وحلول لوجستية ميسّرة لتوسيع نطاق أعمالها.  \n\n🔗 **المصدر:** [Post Link](https://www.instagram.com/...)\n#Jordan #Training #ريادة # مؤسسة_ولي_العهد\n# END OF PROMPT\n# ================================================================\n",
+              "role": "system"
+            },
+            {
+              "content": "=- Author: {{ $json.name }} \"insta username {{ $json.postedby }}\"\n- Text (post caption or content):{{ $json.caption }}\n- URL:{{ $json.url }}\n- Hashtags: {{ $json.hashtags }}"
+            }
+          ]
+        },
+        "options": {
+          "temperature": 0,
+          "topK": 1
+        },
+        "requestOptions": {}
+      },
+      "type": "n8n-nodes-base.perplexity",
+      "typeVersion": 1,
+      "position": [
+        -96,
+        1584
+      ],
+      "id": "810174f6-8b27-4a1e-af11-3b66a8601dab",
+      "name": "Message a model13",
+      "credentials": {
+        "perplexityApi": {
+          "id": "2c7LeNd5bGP2ds8w",
+          "name": "Perplexity account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "mode": "combine",
+        "combineBy": "combineByPosition",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2,
+      "position": [
+        128,
+        1488
+      ],
+      "id": "154831e1-3e93-4625-8ba5-d0eefbf54e21",
+      "name": "Merge13"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "c64a5697-aa87-4a57-991a-ca7063792e38",
+              "name": "name",
+              "value": "={{ $json.name }}",
+              "type": "string"
+            },
+            {
+              "id": "2e76761d-da71-4116-a524-4d6e5054bd3c",
+              "name": "postedby",
+              "value": "={{ $json.postedby }}",
+              "type": "string"
+            },
+            {
+              "id": "2a6a1644-231e-40f0-b7c8-24b51bf68a71",
+              "name": "url",
+              "value": "={{ $json.url }}",
+              "type": "string"
+            },
+            {
+              "id": "b175b0bf-7657-4ab1-8388-1d7fa2d195ae",
+              "name": "slack",
+              "value": "={{ $json.choices[0].message.content }}",
+              "type": "string"
+            },
+            {
+              "id": "23fa8766-f295-40b6-b403-7723afb8de86",
+              "name": "past",
+              "value": "0",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        352,
+        1488
+      ],
+      "id": "07ba39f3-4f4d-4e52-a277-49c5a392cdb9",
+      "name": "Edit Fields13"
+    },
+    {
+      "parameters": {
+        "jsCode": "return items.map((item, index) => {\n  item.json.id = index + 1;\n  return item;\n});\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -544,
+        1392
+      ],
+      "id": "3efec4d7-932e-4014-a6db-139e3b88091d",
+      "name": "Code in JavaScript2"
+    },
+    {
+      "parameters": {
+        "jsCode": "return items.map((item, index) => {\n  item.json.id = index + 1;\n  return item;\n});\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -768,
+        1584
+      ],
+      "id": "37638eb6-e4b5-4c49-8da2-f7a20e6392cc",
+      "name": "Code in JavaScript3"
+    },
+    {
+      "parameters": {
+        "jsCode": "return items.map((item, index) => {\n  item.json.id = index + 1;\n  return item;\n});\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -544,
+        1008
+      ],
+      "id": "dd282cf2-85b4-434c-98a3-f46e26de2f40",
+      "name": "Code in JavaScript4"
+    },
+    {
+      "parameters": {
+        "jsCode": "return items.map((item, index) => {\n  item.json.id = index + 1;\n  return item;\n});\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -768,
+        1200
+      ],
+      "id": "b6c49443-2e92-4ac5-9684-a8340c578a06",
+      "name": "Code in JavaScript5"
+    },
+    {
+      "parameters": {
+        "jsCode": "return items.map((item, index) => {\n  item.json.id = index + 1;\n  return item;\n});\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -768,
+        816
+      ],
+      "id": "8a33411a-a335-4db9-af79-4e90203389e5",
+      "name": "Code in JavaScript6"
+    },
+    {
+      "parameters": {
+        "jsCode": "return items.map((item, index) => {\n  item.json.id = index + 1;\n  return item;\n});\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -544,
+        624
+      ],
+      "id": "8fe874cc-12f6-497a-a1aa-6425d67439a0",
+      "name": "Code in JavaScript7"
+    },
+    {
+      "parameters": {
+        "jsCode": "return items.map((item, index) => {\n  item.json.id = index + 1;\n  return item;\n});\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -768,
+        432
+      ],
+      "id": "51dd5d6a-a1bd-4fc2-b39f-8c1780c5dff5",
+      "name": "Code in JavaScript8"
+    },
+    {
+      "parameters": {
+        "jsCode": "return items.map((item, index) => {\n  item.json.id = index + 1;\n  return item;\n});\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -544,
+        240
+      ],
+      "id": "5052f115-bece-4250-a9ee-ff5d16ed0576",
+      "name": "Code in JavaScript9"
+    },
+    {
+      "parameters": {
+        "jsCode": "return items.map((item, index) => {\n  item.json.id = index + 1;\n  return item;\n});\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -544,
+        -144
+      ],
+      "id": "77435368-0253-46ba-869e-21137acad7c0",
+      "name": "Code in JavaScript10"
+    },
+    {
+      "parameters": {
+        "jsCode": "return items.map((item, index) => {\n  item.json.id = index + 1;\n  return item;\n});\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -768,
+        48
+      ],
+      "id": "c92065a4-0dde-4e03-b741-ad090d2e9401",
+      "name": "Code in JavaScript11"
+    },
+    {
+      "parameters": {
+        "jsCode": "return items.map((item, index) => {\n  item.json.id = index + 1;\n  return item;\n});\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -96,
+        1776
+      ],
+      "id": "1c70492d-f712-40e9-89cf-b9011ecdad9f",
+      "name": "Code in JavaScript12"
+    },
+    {
+      "parameters": {
+        "jsCode": "return items.map((item, index) => {\n  item.json.id = index + 1;\n  return item;\n});\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -96,
+        1968
+      ],
+      "id": "964baa1b-4d57-47ca-bdec-5ddf0a8bd851",
+      "name": "Code in JavaScript13"
+    },
+    {
+      "parameters": {
+        "jsCode": "return items.map((item, index) => {\n  item.json.id = index + 1;\n  return item;\n});\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -96,
+        2160
+      ],
+      "id": "59b9b572-a909-425f-a79b-0b0a81214f77",
+      "name": "Code in JavaScript14"
+    },
+    {
+      "parameters": {
+        "jsCode": "return items.map((item, index) => {\n  item.json.id = index + 1;\n  return item;\n});\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -96,
+        2352
+      ],
+      "id": "308f24f8-6047-462d-917e-2e626bd5cdd4",
+      "name": "Code in JavaScript15"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "711d15e5-5742-4de4-bc16-d6baec1b51ae",
+              "name": "name",
+              "value": "جمعية المهارات الرقمية",
+              "type": "string"
+            },
+            {
+              "id": "ac5226ac-9c18-445f-9e36-0816be2ccf53",
+              "name": "postedby",
+              "value": "=digiskillsjo",
+              "type": "string"
+            },
+            {
+              "id": "f5307448-daaa-4da2-872d-d3674ef0e407",
+              "name": "url",
+              "value": "={{ $json.url }}",
+              "type": "string"
+            },
+            {
+              "id": "96789c63-cbf2-438f-88fe-116c08c36e54",
+              "name": "caption",
+              "value": "={{ $json.caption }}",
+              "type": "string"
+            },
+            {
+              "id": "065c51ad-99eb-4675-b381-e78f234ec6c8",
+              "name": "images",
+              "value": "={{ $json.images }}",
+              "type": "array"
+            },
+            {
+              "id": "7b1a8ea8-50b3-4476-96c4-11c548d747cc",
+              "name": "hashtags",
+              "value": "={{ $json.hashtags }}",
+              "type": "array"
+            }
+          ]
+        },
+        "includeOtherFields": true,
+        "include": "selected",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -1216,
+        -432
+      ],
+      "id": "572bc646-a44a-4ca9-b5ae-4699c46981ef",
+      "name": "Edit Fields14"
+    },
+    {
+      "parameters": {
+        "messages": {
+          "message": [
+            {
+              "content": "🎯 ROLE\n\nYou are an intelligent binary classifier that determines if a LinkedIn, Instagram, or similar social media post represents a real opportunity for students, recent graduates, or young professionals to learn, train, participate, or apply to something beneficial (educational, professional, or developmental).\n\nReturn strictly:\n\n{\"is_opportunity\": true}\n\n\nor\n\n{\"is_opportunity\": false}\n\n🧩 DEFINITION OF “OPPORTUNITY”\n\nAn opportunity means the post invites participation in a current or upcoming program, training, job, competition, or learning event that helps people gain skills, experience, or exposure — especially if it’s free or affordable (≤ 20 JOD ≈ 30 USD).\n\nIt includes calls to action, announcements, open registrations, or learning invitations.\n\n🧭 CLASSIFICATION LOGIC\n✅ TRUE — if ANY of the following apply:\n\nCall for participation\nPhrases such as:\n\nEnglish: “Join”, “Register”, “Apply”, “Sign up”, “We invite you”, “Seats available”, “Don’t miss this”, “Open for registration”.\n\nArabic: “انضم”, “سجل”, “فرصة تدريبية”, “ندعوكم”, “ورشات تدريبية”, “برنامج تدريبي”, “باب التسجيل مفتوح”, “فرصة جديدة”, “تدريب مجاني”.\n\nEducational or professional development content, including:\n\nTrainings, bootcamps, workshops, courses.\n\nInternships, jobs, fellowships, volunteering, mentoring.\n\nConferences, competitions, hackathons, academic events.\n\nScholarships, grants, innovation challenges.\n\nMentions of registration links, dates, or locations, e.g.\n“التسجيل الآن – من 5 إلى 10 نوفمبر” → ✅\n“Apply before 10 Nov” → ✅\n\nFree or low-cost events (≤ 20 JOD)\n\nIf price not mentioned → assume free.\n\nIf explicitly high cost → False.\n\nIf small fee but clearly educational → True.\n\nOpen or upcoming events\nWords like: “coming soon”, “upcoming”, “launching”, “join this month”, “register now”, “starting soon”, “new opportunity”, “برنامج جديد”, “انطلاق”.\n\nCollaborations and initiatives that offer tangible participation\ne.g., “وزارة الاقتصاد الرقمي تطلق برنامج تدريب لطلاب الجامعات بالتعاون مع...” → ✅\n\n❌ FALSE — if ANY of the following apply:\n\nPast or closed events\nIndicators: “اختتام”, “انتهى”, “تم عقد”, “أنهينا”, “أقيمت”, “احتفلنا”, “we completed”, “we concluded”, “we’re proud to announce completion”.\n\nGeneral news or initiatives with no open participation\ne.g., “أعلنت الوزارة عن مبادرة لدعم الشركات الناشئة” (no mention of joining/registering) → ❌\n\nPersonal achievements or reflections\ne.g., “I attended”, “I completed”, “فخور بالمشاركة في”, “شاركت في مؤتمر”.\n\nCommercial, expensive, or promotional services\ne.g., “Join our paid course for 150 JOD”, “خصومات على الدورات المدفوعة” → ❌\n\nGeneral motivational, informational, or awareness posts\ne.g., “5 نصائح لتطوير الذات”, “كيف تبني سيرتك الذاتية” (without event invitation).\n\n🧩 SPECIAL CASE HANDLING\n\nIf the post mentions a partnership or initiative but does not invite others → False.\n\nIf the post celebrates results or graduates (e.g., “اختتام البرنامج التدريبي”) → False.\n\nIf the post shares learning resources (YouTube, article) with no event → False.\n\nIf the post announces an open bootcamp, call, or workshop, even without “Apply now” → True.\n\nIf language is vague but includes key phrases like “فرصة تدريبية” or “workshop” → True.\n\nIf uncertain whether it’s still active → choose True if it seems intended for participants (prefer recall over precision).\n\n💬 EXAMPLES\n\n✅ TRUE\n\n“🎯 فرصة تدريبية جديدة من قفزة تك! سارع بالتسجيل الآن.”\n\n“Join our free 3-day AI Bootcamp starting this Friday.”\n\n“تدعوكم مؤسسة ولي العهد لحضور جلسة حول ريادة الأعمال.”\n\n“وزارة الاقتصاد الرقمي تطلق برنامج تدريب جديد لطلبة الجامعات.”\n\n“Hackathon registration is now open for all students.”\n\n“ورشة تدريبية برسوم رمزية 10 دنانير تشمل الشهادة.”\n\n❌ FALSE\n\n“اختتام دورة تدريب المهارات الرقمية.”\n\n“أعلنت الوزارة عن مبادرة لدعم الشركات.”\n\n“فخورون بخريجينا من برنامج XYZ.”\n\n“شاركنا في المنتدى العربي للريادة.”\n\n“دورة احترافية مدفوعة 200 JOD.”\n\n“5 نصائح لتطوير مهاراتك في التحليل.”\n\n⚙️ OUTPUT FORMAT\n\nReturn only one line in valid JSON:\n\n{\"is_opportunity\": true}\n\n\nor\n\n{\"is_opportunity\": false}\n\n\nNo text, no explanation.\n\n🧩 NOTES\n\nSupport both Arabic and English text.\n\nBe robust to emojis, hashtags, or markdown (ignore them).\n\nFocus on meaning and intent, not formatting.\n\nWhen in doubt → lean toward True if it benefits learners or students.",
+              "role": "system"
+            },
+            {
+              "content": "=Text To Classify:   {{ $json.caption }}"
+            }
+          ]
+        },
+        "options": {
+          "temperature": 0,
+          "topK": 1
+        },
+        "requestOptions": {}
+      },
+      "type": "n8n-nodes-base.perplexity",
+      "typeVersion": 1,
+      "position": [
+        -992,
+        -336
+      ],
+      "id": "a59e4983-2b01-458b-adc1-f54d15274d34",
+      "name": "Message a model14",
+      "credentials": {
+        "perplexityApi": {
+          "id": "2c7LeNd5bGP2ds8w",
+          "name": "Perplexity account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "0a2b7d9d-d05b-4a00-9274-ee9060266538",
+              "leftValue": "={{ $json.choices[0].message.content }}",
+              "rightValue": "{\"is_opportunity\": true}",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        -544,
+        -336
+      ],
+      "id": "dc7befe2-c1d2-449b-b1dc-abf8dc75d145",
+      "name": "If7"
+    },
+    {
+      "parameters": {
+        "mode": "combine",
+        "fieldsToMatchString": "id",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2,
+      "position": [
+        -320,
+        -432
+      ],
+      "id": "1d5b8aea-578b-4418-8783-2711d7f85f38",
+      "name": "Merge14"
+    },
+    {
+      "parameters": {
+        "messages": {
+          "message": [
+            {
+              "content": "# ================================================================\n# 🧩 SOCIAL OPPORTUNITY MESSAGE COMPOSER AGENT\n# ================================================================\n\n🎯 ROLE\nYou are a professional communication assistant that converts structured opportunity data\n(from social media posts such as Instagram, LinkedIn, or X) into concise, engaging, and formatted Slack messages in Arabic or English.\n\nYour task is to write a clear, attractive message suitable for posting directly in a Slack channel.\n\n---\n\n📥 INPUT\nYou receive a JSON object with:\n- Author\n- Text (post caption or content)\n- URL\n- Hashtags\n\n---\n\n🧩 TASK\nCraft a short Slack message (Arabic preferred if input is Arabic, otherwise English) that includes:\n1. A short, engaging headline (e.g., “🎓 فرصة تدريبية جديدة!” or “🚀 New Opportunity!”).\n2. The author or organization name (e.g., “أعلنت وزارة الاقتصاد الرقمي والريادة عن…”).\n3. The main content of the post summarized clearly and naturally (do not copy the full text).\n4. A single source link in the format:\n   🔗 **المصدر:** [Post Link](<url>)\n5. add the provided hashtags at the bottom of the message\n\nKeep the structure visually clean and friendly using emojis and line breaks.\n\n---\n\n⚙️ OUTPUT FORMAT\nOutput plain text (ready to send to Slack).  \nDo not output JSON, markdown code fences, or explanations.\n\n---\n\n✅ EXAMPLE OUTPUT\n🎯 **فرصة للشركات الناشئة في الأردن!**  \nأعلنت **وزارة الاقتصاد الرقمي والريادة** بالتعاون مع **البريد الأردني** عن مبادرة لدعم الشركات الناشئة  \nمن خلال أسعار شحن تفضيلية وحلول لوجستية ميسّرة لتوسيع نطاق أعمالها.  \n\n🔗 **المصدر:** [Post Link](https://www.instagram.com/...)\n#Jordan #Training #ريادة # الاقتصاد_الرقمي\n# END OF PROMPT\n# ================================================================\n",
+              "role": "system"
+            },
+            {
+              "content": "=- Author: {{ $json.name }} \"insta username {{ $json.postedby }}\"\n- Text (post caption or content):{{ $json.caption }}\n- URL:{{ $json.url }}\n- Hashtags: {{ $json.hashtags }}"
+            }
+          ]
+        },
+        "options": {
+          "temperature": 0,
+          "topK": 1
+        },
+        "requestOptions": {}
+      },
+      "type": "n8n-nodes-base.perplexity",
+      "typeVersion": 1,
+      "position": [
+        -96,
+        -320
+      ],
+      "id": "87c97ab7-8a21-46c1-9253-fbddb045dd84",
+      "name": "Message a model15",
+      "credentials": {
+        "perplexityApi": {
+          "id": "2c7LeNd5bGP2ds8w",
+          "name": "Perplexity account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "mode": "combine",
+        "combineBy": "combineByPosition",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2,
+      "position": [
+        128,
+        -432
+      ],
+      "id": "21a01bdd-04eb-4f18-bfbb-b30f4cfc62d3",
+      "name": "Merge15"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "c64a5697-aa87-4a57-991a-ca7063792e38",
+              "name": "name",
+              "value": "={{ $json.name }}",
+              "type": "string"
+            },
+            {
+              "id": "2e76761d-da71-4116-a524-4d6e5054bd3c",
+              "name": "postedby",
+              "value": "={{ $json.postedby }}",
+              "type": "string"
+            },
+            {
+              "id": "2a6a1644-231e-40f0-b7c8-24b51bf68a71",
+              "name": "url",
+              "value": "={{ $json.url }}",
+              "type": "string"
+            },
+            {
+              "id": "b175b0bf-7657-4ab1-8388-1d7fa2d195ae",
+              "name": "slack",
+              "value": "={{ $json.choices[0].message.content }}",
+              "type": "string"
+            },
+            {
+              "id": "0551255b-c895-4eae-a6de-75f2f2793e72",
+              "name": "past",
+              "value": "0",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        352,
+        -432
+      ],
+      "id": "38ccdef0-3167-424d-bdd8-4c59b326dfa6",
+      "name": "Edit Fields15"
+    },
+    {
+      "parameters": {
+        "jsCode": "return items.map((item, index) => {\n  item.json.id = index + 1;\n  return item;\n});\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -544,
+        -528
+      ],
+      "id": "1e56f852-ea7a-4327-a810-b4807e64e46a",
+      "name": "Code in JavaScript16"
+    },
+    {
+      "parameters": {
+        "jsCode": "return items.map((item, index) => {\n  item.json.id = index + 1;\n  return item;\n});\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -768,
+        -336
+      ],
+      "id": "3cdea0d0-68b9-4496-bffc-4852d83e9ae4",
+      "name": "Code in JavaScript17"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.apify.com/v2/acts/apify~instagram-post-scraper/run-sync-get-dataset-items?token=apify_api_qr6Omnms4Pf91mLKRy0MkUEskJjDJf0Pt9cr",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "{\n    \"onlyPostsNewerThan\": \"1 days\",\n    \"resultsLimit\": 10,\n    \"skipPinnedPosts\": false,\n    \"username\": [\n        \"digiskillsjo\"\n    ]\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -1440,
+        -432
+      ],
+      "id": "3ecb1573-ddf8-4570-833b-32e03c5a02a9",
+      "name": "digiskillsjo"
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "triggerAtHour": 19
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        -1664,
+        912
+      ],
+      "id": "c223c5d2-127d-4991-8160-2488752cb279",
+      "name": "Schedule Trigger"
+    },
+    {
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "value": "1oSvYf6B6ac6OA5b7hpFVBfPRqXU7CXd_oU7ll8ROADs",
+          "mode": "list",
+          "cachedResultName": "Instagram",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1oSvYf6B6ac6OA5b7hpFVBfPRqXU7CXd_oU7ll8ROADs/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1oSvYf6B6ac6OA5b7hpFVBfPRqXU7CXd_oU7ll8ROADs/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "url": "={{ $json.url }}",
+            "postedby": "={{ $json.postedby }}",
+            "name": "={{ $json.name }}",
+            "slack": "={{ $json.slack }}",
+            "past": "={{ $json.past }}"
+          },
+          "matchingColumns": [
+            "url"
+          ],
+          "schema": [
+            {
+              "id": "name",
+              "displayName": "name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "postedby",
+              "displayName": "postedby",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "url",
+              "displayName": "url",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "slack",
+              "displayName": "slack",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "past",
+              "displayName": "past",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        576,
+        -432
+      ],
+      "id": "c586d0be-6adf-4f78-8993-1626279af879",
+      "name": "Append or update row in sheet7",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "wQdA4VWngt0fTE7e",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "value": "1oSvYf6B6ac6OA5b7hpFVBfPRqXU7CXd_oU7ll8ROADs",
+          "mode": "list",
+          "cachedResultName": "Instagram",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1oSvYf6B6ac6OA5b7hpFVBfPRqXU7CXd_oU7ll8ROADs/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1oSvYf6B6ac6OA5b7hpFVBfPRqXU7CXd_oU7ll8ROADs/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "url": "={{ $json.url }}",
+            "postedby": "={{ $json.postedby }}",
+            "name": "={{ $json.name }}",
+            "slack": "={{ $json.slack }}",
+            "past": "={{ $json.past }}"
+          },
+          "matchingColumns": [
+            "url"
+          ],
+          "schema": [
+            {
+              "id": "name",
+              "displayName": "name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "postedby",
+              "displayName": "postedby",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "url",
+              "displayName": "url",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "slack",
+              "displayName": "slack",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "past",
+              "displayName": "past",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        576,
+        336
+      ],
+      "id": "997f194a-f8d3-4a2b-81d8-2306ea319e8a",
+      "name": "Append or update row in sheet3",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "wQdA4VWngt0fTE7e",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "value": "1oSvYf6B6ac6OA5b7hpFVBfPRqXU7CXd_oU7ll8ROADs",
+          "mode": "list",
+          "cachedResultName": "Instagram",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1oSvYf6B6ac6OA5b7hpFVBfPRqXU7CXd_oU7ll8ROADs/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1oSvYf6B6ac6OA5b7hpFVBfPRqXU7CXd_oU7ll8ROADs/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "url": "={{ $json.url }}",
+            "postedby": "={{ $json.postedby }}",
+            "name": "={{ $json.name }}",
+            "slack": "={{ $json.slack }}",
+            "past": "={{ $json.past }}"
+          },
+          "matchingColumns": [
+            "url"
+          ],
+          "schema": [
+            {
+              "id": "name",
+              "displayName": "name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "postedby",
+              "displayName": "postedby",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "url",
+              "displayName": "url",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "slack",
+              "displayName": "slack",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "past",
+              "displayName": "past",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        576,
+        720
+      ],
+      "id": "615faf84-0158-4509-99dc-7f505e388fe3",
+      "name": "Append or update row in sheet4",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "wQdA4VWngt0fTE7e",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "value": "1oSvYf6B6ac6OA5b7hpFVBfPRqXU7CXd_oU7ll8ROADs",
+          "mode": "list",
+          "cachedResultName": "Instagram",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1oSvYf6B6ac6OA5b7hpFVBfPRqXU7CXd_oU7ll8ROADs/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1oSvYf6B6ac6OA5b7hpFVBfPRqXU7CXd_oU7ll8ROADs/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "url": "={{ $json.url }}",
+            "postedby": "={{ $json.postedby }}",
+            "name": "={{ $json.name }}",
+            "slack": "={{ $json.slack }}",
+            "past": "={{ $json.past }}"
+          },
+          "matchingColumns": [
+            "url"
+          ],
+          "schema": [
+            {
+              "id": "name",
+              "displayName": "name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "postedby",
+              "displayName": "postedby",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "url",
+              "displayName": "url",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "slack",
+              "displayName": "slack",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "past",
+              "displayName": "past",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        576,
+        1104
+      ],
+      "id": "431e8cc2-6103-4d94-a724-44885e653d10",
+      "name": "Append or update row in sheet5",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "wQdA4VWngt0fTE7e",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "value": "1oSvYf6B6ac6OA5b7hpFVBfPRqXU7CXd_oU7ll8ROADs",
+          "mode": "list",
+          "cachedResultName": "Instagram",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1oSvYf6B6ac6OA5b7hpFVBfPRqXU7CXd_oU7ll8ROADs/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1oSvYf6B6ac6OA5b7hpFVBfPRqXU7CXd_oU7ll8ROADs/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "url": "={{ $json.url }}",
+            "postedby": "={{ $json.postedby }}",
+            "name": "={{ $json.name }}",
+            "slack": "={{ $json.slack }}",
+            "past": "={{ $json.past }}"
+          },
+          "matchingColumns": [
+            "url"
+          ],
+          "schema": [
+            {
+              "id": "name",
+              "displayName": "name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "postedby",
+              "displayName": "postedby",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "url",
+              "displayName": "url",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "slack",
+              "displayName": "slack",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "past",
+              "displayName": "past",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        576,
+        1488
+      ],
+      "id": "a0d6a322-ef12-451f-a302-259f4a474c66",
+      "name": "Append or update row in sheet6",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "wQdA4VWngt0fTE7e",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "value": "1rUV6GTqkb30URkLoKy-X2V28jewikwsqUuwwU6v5-Po",
+          "mode": "list",
+          "cachedResultName": "LinkedIn",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1rUV6GTqkb30URkLoKy-X2V28jewikwsqUuwwU6v5-Po/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1rUV6GTqkb30URkLoKy-X2V28jewikwsqUuwwU6v5-Po/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Author": "={{ $json.Author }}",
+            "url": "={{ $json.url }}",
+            "Slack": "={{ $json.Slack }}",
+            "past": "={{ $json.past }}"
+          },
+          "matchingColumns": [
+            "url"
+          ],
+          "schema": [
+            {
+              "id": "Author",
+              "displayName": "Author",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "url",
+              "displayName": "url",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Slack",
+              "displayName": "Slack",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "past",
+              "displayName": "past",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        1024,
+        2256
+      ],
+      "id": "04ac7df0-713c-4837-924f-e06cb34c890b",
+      "name": "Append or update row in sheet1",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "wQdA4VWngt0fTE7e",
+          "name": "Google Sheets account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "modeejo": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "cpfjo": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ieeettu": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "qafzafortech": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ytj.jordan": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Eng.Ahmad Suwaileh م.احمد صويلح": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Abdullah Abu Elayyan": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields6": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields5": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript": {
+      "main": [
+        [
+          {
+            "node": "Filter",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript1": {
+      "main": [
+        [
+          {
+            "node": "Filter1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Filter1": {
+      "main": [
+        [
+          {
+            "node": "Message a model",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Code in JavaScript14",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Filter": {
+      "main": [
+        [
+          {
+            "node": "Message a model1",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Code in JavaScript12",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Message a model1": {
+      "main": [
+        [
+          {
+            "node": "If",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript13",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Merge": {
+      "main": [
+        [
+          {
+            "node": "Message a model2",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Merge1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Message a model2": {
+      "main": [
+        [
+          {
+            "node": "Merge1",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Merge1": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields7": {
+      "main": [
+        [
+          {
+            "node": "Append or update row in sheet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If1": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript15",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Merge2": {
+      "main": [
+        [
+          {
+            "node": "Message a model3",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Merge3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Message a model3": {
+      "main": [
+        [
+          {
+            "node": "Merge3",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Merge3": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields8",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields8": {
+      "main": [
+        [
+          {
+            "node": "Append or update row in sheet1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Message a model": {
+      "main": [
+        [
+          {
+            "node": "If1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "Message a model4",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Code in JavaScript10",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Message a model4": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript11",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If2": {
+      "main": [
+        [
+          {
+            "node": "Merge4",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Merge4": {
+      "main": [
+        [
+          {
+            "node": "Message a model5",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Merge5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Message a model5": {
+      "main": [
+        [
+          {
+            "node": "Merge5",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Merge5": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields9",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields9": {
+      "main": [
+        [
+          {
+            "node": "Append or update row in sheet2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Message a model6": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript8",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If3": {
+      "main": [
+        [
+          {
+            "node": "Merge6",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Merge6": {
+      "main": [
+        [
+          {
+            "node": "Message a model7",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Merge7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Message a model7": {
+      "main": [
+        [
+          {
+            "node": "Merge7",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Merge7": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields10",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields10": {
+      "main": [
+        [
+          {
+            "node": "Append or update row in sheet3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields1": {
+      "main": [
+        [
+          {
+            "node": "Message a model6",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Code in JavaScript9",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Message a model8": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If4": {
+      "main": [
+        [
+          {
+            "node": "Merge8",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Merge8": {
+      "main": [
+        [
+          {
+            "node": "Message a model9",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Merge9",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Message a model9": {
+      "main": [
+        [
+          {
+            "node": "Merge9",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Merge9": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields11",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields11": {
+      "main": [
+        [
+          {
+            "node": "Append or update row in sheet4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields2": {
+      "main": [
+        [
+          {
+            "node": "Message a model8",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Code in JavaScript7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Message a model10": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If5": {
+      "main": [
+        [
+          {
+            "node": "Merge10",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Merge10": {
+      "main": [
+        [
+          {
+            "node": "Message a model11",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Merge11",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Message a model11": {
+      "main": [
+        [
+          {
+            "node": "Merge11",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Merge11": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields12",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields12": {
+      "main": [
+        [
+          {
+            "node": "Append or update row in sheet5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields3": {
+      "main": [
+        [
+          {
+            "node": "Message a model10",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Code in JavaScript4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Message a model12": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If6": {
+      "main": [
+        [
+          {
+            "node": "Merge12",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Merge12": {
+      "main": [
+        [
+          {
+            "node": "Message a model13",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Merge13",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Message a model13": {
+      "main": [
+        [
+          {
+            "node": "Merge13",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Merge13": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields13",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields13": {
+      "main": [
+        [
+          {
+            "node": "Append or update row in sheet6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields4": {
+      "main": [
+        [
+          {
+            "node": "Message a model12",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Code in JavaScript2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript2": {
+      "main": [
+        [
+          {
+            "node": "Merge12",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript3": {
+      "main": [
+        [
+          {
+            "node": "If6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript4": {
+      "main": [
+        [
+          {
+            "node": "Merge10",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript5": {
+      "main": [
+        [
+          {
+            "node": "If5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript7": {
+      "main": [
+        [
+          {
+            "node": "Merge8",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript6": {
+      "main": [
+        [
+          {
+            "node": "If4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript8": {
+      "main": [
+        [
+          {
+            "node": "If3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript9": {
+      "main": [
+        [
+          {
+            "node": "Merge6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript10": {
+      "main": [
+        [
+          {
+            "node": "Merge4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript11": {
+      "main": [
+        [
+          {
+            "node": "If2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript12": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript13": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript14": {
+      "main": [
+        [
+          {
+            "node": "Merge2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript15": {
+      "main": [
+        [
+          {
+            "node": "Merge2",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Edit Fields14": {
+      "main": [
+        [
+          {
+            "node": "Message a model14",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Code in JavaScript16",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Message a model14": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript17",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If7": {
+      "main": [
+        [
+          {
+            "node": "Merge14",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Merge14": {
+      "main": [
+        [
+          {
+            "node": "Message a model15",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Merge15",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Message a model15": {
+      "main": [
+        [
+          {
+            "node": "Merge15",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Merge15": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields15",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields15": {
+      "main": [
+        [
+          {
+            "node": "Append or update row in sheet7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript16": {
+      "main": [
+        [
+          {
+            "node": "Merge14",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript17": {
+      "main": [
+        [
+          {
+            "node": "If7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "digiskillsjo": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields14",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "modeejo",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "digiskillsjo",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "cpfjo",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "ieeettu",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "qafzafortech",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "ytj.jordan",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Eng.Ahmad Suwaileh م.احمد صويلح",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Abdullah Abu Elayyan",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "e781d438-d757-4335-bc4d-53c72f90eea8",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "236f0b1acb192531dccc73bc1197afa7ea966f808896faca42a988222339c00f"
+  },
+  "id": "gJLx9cQNavXJEJX2",
+  "tags": []
+}

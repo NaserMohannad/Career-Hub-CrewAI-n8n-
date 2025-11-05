@@ -1,0 +1,212 @@
+{
+  "name": "get data",
+  "nodes": [
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1u93f9Xllj830_KnChIwuyPYsyl1H8-mcRxXaW6XWlEg",
+          "mode": "list",
+          "cachedResultName": "SynCrew POST",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1u93f9Xllj830_KnChIwuyPYsyl1H8-mcRxXaW6XWlEg/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1u93f9Xllj830_KnChIwuyPYsyl1H8-mcRxXaW6XWlEg/edit#gid=0"
+        },
+        "filtersUI": {
+          "values": [
+            {
+              "lookupColumn": "ID",
+              "lookupValue": "={{ $json.student_id }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        -272,
+        -176
+      ],
+      "id": "fc765318-86b0-49f4-81e3-087151fdf6f0",
+      "name": "Get row(s) in sheet",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "wQdA4VWngt0fTE7e",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "mode": "combine",
+        "advanced": true,
+        "mergeByFields": {
+          "values": [
+            {
+              "field1": "ID",
+              "field2": "student_id"
+            }
+          ]
+        },
+        "joinMode": "keepEverything",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2,
+      "position": [
+        -48,
+        -112
+      ],
+      "id": "ba298103-9332-47c8-a043-0c272a656999",
+      "name": "Merge"
+    },
+    {
+      "parameters": {
+        "includeOtherFields": true,
+        "include": "selected",
+        "includeFields": "Name, Email, title, company, location, is_remote, seniority, job_type, description, benefits, apply_url, source, requirements",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        176,
+        -112
+      ],
+      "id": "62fba970-91b7-4971-9e93-fe064cdb3981",
+      "name": "Email"
+    },
+    {
+      "parameters": {
+        "sendTo": "={{ $json.Email }}",
+        "subject": "وجدنا وظيفة قد تناسبك!",
+        "message": "=<p>مرحباً <b>{{ $json.Name }}</b> 👋،</p>\n\n<p>وجدنا فرصة عمل قد تهمّك 🔎 إليك تفاصيلها:</p>\n\n<hr>\n\n<p>\n<b>💼 المسمّى الوظيفي:</b> {{ $json.title }} <br>\n<b>🏢 الشركة:</b> {{ $json.company }} <br>\n<b>📍 الموقع:</b> {{$json[\"location\"]}}<br>\n<b>🕒 طبيعة العمل:</b> {{$json[\"job_type\"]}}\n</p>\n\n<hr>\n\n<p><b>📝 وصف الوظيفة:</b></p>\n<p>{{ $json.description }}</p>\n\n<hr>\n\n<p><b>🧠 المهارات والمتطلبات:</b><br>\n{{ $json.requirements }}\n</p>\n\n<hr>\n\n<p>\n<b>🔗 روابط مهمة:</b><br>\n👉 <a href=\"{{ $json.apply_url }}\" target=\"_blank\">رابط التقديم على الوظيفة</a><br>\n</p>\n\n<hr>\n\n<p>نتمنى لك كل التوفيق في رحلتك المهنية 🚀<br>\n<span style=\"color:gray; font-size:12px;\">(تم إرسال هذا البريد تلقائياً عبر نظام الأتمتة n8n)</span></p>\n",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        400,
+        -112
+      ],
+      "id": "d3014cd7-2bcf-4e81-8ded-01c169c3f2ff",
+      "name": "Send a message",
+      "webhookId": "d80c2ebc-bc6f-4ce6-b2f4-2abde6f61284",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "jMzpDZ0pkIbUpOG4",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "27c1d9bf-73ef-4e6e-8623-4354292bb7e2",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        -720,
+        -112
+      ],
+      "id": "be893168-7bb6-4a59-81c2-c3bd6a519ba8",
+      "name": "Webhook",
+      "webhookId": "27c1d9bf-73ef-4e6e-8623-4354292bb7e2"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Parse input data (from Webhook)\nconst input = JSON.parse(items[0].json.body ? JSON.stringify(items[0].json) : JSON.stringify(items[0]));\n\n// Extract jobs safely\nconst jobs = input.body?.jobs || [];\n\n// Function to generate unique ID\nconst generateId = (index) => `job_${Date.now()}_${index + 1}`;\n\nconst results = jobs.map((job, index) => ({\n  id: generateId(index),\n  title: job.title || null,\n  company: job.company || null,\n  location: job.location || null,\n  is_remote: job.is_remote || false,\n  seniority: job.seniority || null,\n  posted_at: job.posted_at || null,\n  job_type: job.job_type || null,\n  salary: job.salary || null,\n  description: job.description || null,\n  requirements: job.requirements?.join(\" | \") || null,\n  benefits: job.benefits?.join(\" | \") || null,\n  apply_url: job.apply_url || null,\n  source: job.source_domain || null,\n  // ✅ Ensure student_id is numeric (matches Google Sheet ID)\n  student_id: job.student_id && job.student_id.length > 0 ? Number(job.student_id[0]) : null\n}));\n\nreturn results.map(r => ({ json: r }));\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -496,
+        -112
+      ],
+      "id": "cee4a83d-83d8-4997-8c02-51b6151eb501",
+      "name": "Code in JavaScript1"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Get row(s) in sheet": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Merge": {
+      "main": [
+        [
+          {
+            "node": "Email",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Email": {
+      "main": [
+        [
+          {
+            "node": "Send a message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript1": {
+      "main": [
+        [
+          {
+            "node": "Get row(s) in sheet",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "ea65af27-2281-421c-94ec-7491e46aa960",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "236f0b1acb192531dccc73bc1197afa7ea966f808896faca42a988222339c00f"
+  },
+  "id": "IQzREoiwqmrHtNQo",
+  "tags": []
+}

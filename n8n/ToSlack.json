@@ -1,0 +1,605 @@
+{
+  "name": "ToSlack",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "triggerAtHour": 20
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        0,
+        240
+      ],
+      "id": "2dc2ce22-9d0c-4f93-a931-0e359fcec71d",
+      "name": "Schedule Trigger"
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1oSvYf6B6ac6OA5b7hpFVBfPRqXU7CXd_oU7ll8ROADs",
+          "mode": "list",
+          "cachedResultName": "Instagram",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1oSvYf6B6ac6OA5b7hpFVBfPRqXU7CXd_oU7ll8ROADs/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1oSvYf6B6ac6OA5b7hpFVBfPRqXU7CXd_oU7ll8ROADs/edit#gid=0"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        224,
+        432
+      ],
+      "id": "207842bc-1161-4151-aaa5-223394d1eab6",
+      "name": "Insta",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "wQdA4VWngt0fTE7e",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1rUV6GTqkb30URkLoKy-X2V28jewikwsqUuwwU6v5-Po",
+          "mode": "list",
+          "cachedResultName": "LinkedIn",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1rUV6GTqkb30URkLoKy-X2V28jewikwsqUuwwU6v5-Po/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1rUV6GTqkb30URkLoKy-X2V28jewikwsqUuwwU6v5-Po/edit#gid=0"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        224,
+        48
+      ],
+      "id": "43c07e90-0a1a-485a-aa41-1461716e937c",
+      "name": "LinkedIn",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "wQdA4VWngt0fTE7e",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "// يهروب backslashes, double-quotes, والـ newlines\nreturn items.map(item => {\n  const s = (item.json.slack ?? '').toString();\n  const sanitized = s\n    .replace(/\\\\/g, '\\\\\\\\')   // \\  -> \\\\\n    .replace(/\"/g, '\\\\\"')     // \"  -> \\\"\n    .replace(/\\n/g, '\\\\n');   // LF -> \\n (نصي)\n\n  item.json.slack_sanitized = sanitized;\n  return item;\n});\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        672,
+        432
+      ],
+      "id": "4615e77b-c21b-4f50-8f34-7e85f0435b6a",
+      "name": "Code in JavaScript"
+    },
+    {
+      "parameters": {
+        "jsCode": "return items.map(item => {\n  // التعامل مع اختلاف أسماء الحقول (Slack أو slack)\n  const s = (item.json.Slack ?? item.json.slack ?? '').toString();\n\n  // نهرب الرموز التي تكسر JSON\n  const sanitized = s\n    .replace(/\\\\/g, '\\\\\\\\')   // \\  -> \\\\\n    .replace(/\"/g, '\\\\\"')     // \"  -> \\\"\n    .replace(/\\n/g, '\\\\n');   // الأسطر الجديدة -> \\n نصي\n\n  // نخزن النص الآمن في slack_sanitized\n  item.json.slack_sanitized = sanitized;\n\n  // كمان نعمل نفس الشيء لحقل الاسم (Author أو name)\n  item.json.name_safe = (item.json.Author ?? item.json.name ?? '').toString()\n    .replace(/\\\\/g, '\\\\\\\\')\n    .replace(/\"/g, '\\\\\"');\n\n  return item;\n});\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        672,
+        48
+      ],
+      "id": "e9355042-055d-43e8-924d-08a946326f61",
+      "name": "Code in JavaScript1"
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "select": "channel",
+        "channelId": {
+          "__rl": true,
+          "value": "C09PQRBAZA9",
+          "mode": "list",
+          "cachedResultName": "all-syncrewforcareerguide"
+        },
+        "messageType": "block",
+        "blocksUi": "={\n  \"blocks\": [\n    {\n      \"type\": \"divider\"\n    },\n    {\n      \"type\": \"section\",\n      \"text\": {\n        \"type\": \"mrkdwn\",\n        \"text\": \"*{{ $json.name_safe }}*\\n:star::star::star::star::star:\"\n      }\n    },\n    {\n      \"type\": \"section\",\n      \"text\": {\n        \"type\": \"mrkdwn\",\n        \"text\": \"{{ $json.slack_sanitized }}\"\n      }\n    }\n  ]\n}\n",
+        "text": "=",
+        "otherOptions": {}
+      },
+      "type": "n8n-nodes-base.slack",
+      "typeVersion": 2.3,
+      "position": [
+        896,
+        144
+      ],
+      "id": "017f9a33-bfd2-4e4c-8404-b648aaff9bed",
+      "name": "Send a message1",
+      "webhookId": "d863c4b4-ebe9-4bcc-b0a6-b264daa8a4f5",
+      "credentials": {
+        "slackOAuth2Api": {
+          "id": "0O9hJgisqn3ZyUtY",
+          "name": "Slack account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "select": "channel",
+        "channelId": {
+          "__rl": true,
+          "value": "C09PQRBAZA9",
+          "mode": "list",
+          "cachedResultName": "all-syncrewforcareerguide"
+        },
+        "messageType": "block",
+        "blocksUi": "={\n  \"blocks\": [\n    {\n      \"type\": \"divider\"\n    },\n    {\n      \"type\": \"section\",\n      \"text\": {\n        \"type\": \"mrkdwn\",\n        \"text\": \"*{{ $json.name }}*\\n:star::star::star::star::star:\"\n      }\n    },\n    {\n      \"type\": \"section\",\n      \"text\": {\n        \"type\": \"mrkdwn\",\n        \"text\": \"{{ $json.slack_sanitized }}\"\n      }\n    }\n  ]\n}\n",
+        "text": "=",
+        "otherOptions": {}
+      },
+      "type": "n8n-nodes-base.slack",
+      "typeVersion": 2.3,
+      "position": [
+        896,
+        528
+      ],
+      "id": "306380d3-ae12-4b37-a62f-24a139ceec65",
+      "name": "Send a message",
+      "webhookId": "d863c4b4-ebe9-4bcc-b0a6-b264daa8a4f5",
+      "credentials": {
+        "slackOAuth2Api": {
+          "id": "0O9hJgisqn3ZyUtY",
+          "name": "Slack account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "value": "1oSvYf6B6ac6OA5b7hpFVBfPRqXU7CXd_oU7ll8ROADs",
+          "mode": "list",
+          "cachedResultName": "Instagram",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1oSvYf6B6ac6OA5b7hpFVBfPRqXU7CXd_oU7ll8ROADs/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1oSvYf6B6ac6OA5b7hpFVBfPRqXU7CXd_oU7ll8ROADs/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "past": "={{ $json.past }}",
+            "name": "={{ $json.name }}",
+            "postedby": "={{ $json.postedby }}",
+            "url": "={{ $json.url }}",
+            "slack": "={{ $json.slack }}"
+          },
+          "matchingColumns": [
+            "url"
+          ],
+          "schema": [
+            {
+              "id": "name",
+              "displayName": "name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "postedby",
+              "displayName": "postedby",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "url",
+              "displayName": "url",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "slack",
+              "displayName": "slack",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "past",
+              "displayName": "past",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        1120,
+        336
+      ],
+      "id": "dc074be1-8f5c-4ebd-a33a-d1192363ecd2",
+      "name": "Append or update row in sheet",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "wQdA4VWngt0fTE7e",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "6bb349bc-d8c7-436b-8167-2454cf2def51",
+              "name": "past",
+              "value": "1",
+              "type": "string"
+            }
+          ]
+        },
+        "includeOtherFields": true,
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        896,
+        336
+      ],
+      "id": "ae419f52-a040-4f0d-8e7e-c1c5421d912c",
+      "name": "Edit Fields"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "322518f3-2d8e-4a37-be90-e51cb57caf80",
+              "leftValue": "={{ $json.past }}",
+              "rightValue": 1,
+              "operator": {
+                "type": "number",
+                "operation": "notEquals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        448,
+        432
+      ],
+      "id": "be09f135-43b5-4114-b78e-192d9fbbb4b6",
+      "name": "If"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "322518f3-2d8e-4a37-be90-e51cb57caf80",
+              "leftValue": "={{ $json.past }}",
+              "rightValue": 1,
+              "operator": {
+                "type": "number",
+                "operation": "notEquals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        448,
+        48
+      ],
+      "id": "68b98759-5e8a-4320-8416-9759a522571c",
+      "name": "If1"
+    },
+    {
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "value": "1rUV6GTqkb30URkLoKy-X2V28jewikwsqUuwwU6v5-Po",
+          "mode": "list",
+          "cachedResultName": "LinkedIn",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1rUV6GTqkb30URkLoKy-X2V28jewikwsqUuwwU6v5-Po/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1rUV6GTqkb30URkLoKy-X2V28jewikwsqUuwwU6v5-Po/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "url": "={{ $json.url }}",
+            "Author": "={{ $json.Author }}",
+            "Slack": "={{ $json.slack_sanitized }}",
+            "past": "={{ $json.past }}"
+          },
+          "matchingColumns": [
+            "url"
+          ],
+          "schema": [
+            {
+              "id": "Author",
+              "displayName": "Author",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "url",
+              "displayName": "url",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Slack",
+              "displayName": "Slack",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "past",
+              "displayName": "past",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        1120,
+        -48
+      ],
+      "id": "a5d99f5c-6340-4918-a4bf-3ac401487eee",
+      "name": "Append or update row in sheet1",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "wQdA4VWngt0fTE7e",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "6bb349bc-d8c7-436b-8167-2454cf2def51",
+              "name": "past",
+              "value": "1",
+              "type": "string"
+            }
+          ]
+        },
+        "includeOtherFields": true,
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        896,
+        -48
+      ],
+      "id": "52f7f56f-3405-4038-a175-1f9fba0a8b26",
+      "name": "Edit Fields1"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "Insta",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "LinkedIn",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Insta": {
+      "main": [
+        [
+          {
+            "node": "If",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript": {
+      "main": [
+        [
+          {
+            "node": "Send a message",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "LinkedIn": {
+      "main": [
+        [
+          {
+            "node": "If1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript1": {
+      "main": [
+        [
+          {
+            "node": "Send a message1",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Edit Fields1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "Append or update row in sheet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If1": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields1": {
+      "main": [
+        [
+          {
+            "node": "Append or update row in sheet1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "8d8564bc-3408-45ee-b9f1-c719f01812d0",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "236f0b1acb192531dccc73bc1197afa7ea966f808896faca42a988222339c00f"
+  },
+  "id": "l1087Iip7ZqKktga",
+  "tags": []
+}

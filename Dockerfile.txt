@@ -1,0 +1,24 @@
+FROM python:3.10-slim
+
+ENV PIP_NO_CACHE_DIR=1 \
+    PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1
+
+ENV HOME=/home/user \
+    XDG_DATA_HOME=/home/user/.local/share \
+    CREWAI_STORAGE_PATH=/home/user/.local/share/crewai \
+    HF_HOME=/home/user/.cache/huggingface
+
+WORKDIR /app
+
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+COPY . .
+
+RUN mkdir -p $XDG_DATA_HOME $CREWAI_STORAGE_PATH /app/incoming /app/daily-job-recommendations
+
+EXPOSE 7860
+
+
+CMD ["bash", "-lc", "python -m uvicorn app:app --host 0.0.0.0 --port ${PORT:-7860} --workers 1"]

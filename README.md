@@ -1,6 +1,7 @@
 # Career Hub
 
-# You can Access the tool here 👉🏻https://mo36sem.github.io/career-hub/👈🏻
+# You can Access the tool here 
+# 👉🏻https://mo36sem.github.io/career-hub/
 
 A lightweight, AI-powered hub that helps students and early-career talent discover opportunities, build skills, and get personalized guidance — all in one place.
 

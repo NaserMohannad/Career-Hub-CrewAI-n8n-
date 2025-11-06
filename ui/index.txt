@@ -1,0 +1,853 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Career Hub</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <style>
+      html, body { height: 100%; margin: 0; }
+      #root { min-height: 100%; }
+      @media (max-width: 1023px){ .features-row{ flex-direction: column !important; } }
+    </style>
+  </head>
+
+  <body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+      const { useState, useEffect, useRef } = React;
+
+      const CHATBOT_WEBHOOK_URL = 'https://syncrew.app.n8n.cloud/webhook/119c5133-8dfb-49d2-951a-dfa2d672e4e1';
+      const SLACK_INVITE_URL = 'https://join.slack.com/t/syncrewforcareerguide/shared_invite/zt-3h3uov6jn-xdkWsRgWKbtCprA1S8wDhA';
+
+      function App() {
+        const [mode, setMode] = useState('home');
+
+        useEffect(() => {
+          try { localStorage.clear(); } catch {}
+        }, []);
+
+        return (
+          <div style={styles.body}>
+            <header style={styles.header}>
+              <div style={{ ...styles.container, ...styles.headerRow }}>
+                {mode === 'home'
+                  ? <div></div>
+                  : <button onClick={() => setMode('home')} style={{ ...styles.btnHeader, background: '#111', color: '#fff' }}>← back</button>
+                }
+                <h1 style={styles.siteTitle}>Career Hub</h1>
+              </div>
+            </header>
+
+            <main>
+              {mode === 'home' && (
+                <section style={styles.features}>
+                  <div style={styles.container}>
+                    <div className="features-row" style={styles.featuresRow}>
+                      <FeatureCard title="Job Opportunities" onOpen={() => setMode('job')} buttonText="Open">
+                        <div style={styles.cardContent}>
+                          <p style={styles.boxText}>Get daily emails about job & internship opportunities that might suit you</p>
+                        </div>
+                      </FeatureCard>
+
+                      <FeatureCard title="Career Chat Assistant" onOpen={() => setMode('chat')} buttonText="Open">
+                        <div style={styles.cardContent}>
+                          <p style={styles.boxText}>Chat with our assistant and improve your Resume LinkedIn and to prepare for interview</p>
+                        </div>
+                      </FeatureCard>
+
+                      <FeatureCard
+                        title="Skill Builder"
+                        buttonText="Join"
+                        onOpen={(e) => {
+                          e.stopPropagation();
+                          window.open(SLACK_INVITE_URL, '_blank', 'noopener,noreferrer');
+                        }}
+                      >
+                        <div style={styles.cardContent}>
+                          <p style={styles.boxText}>
+                            Join our Slack channel and get daily updates about opportunities to shape your skills. You will find jobs, internships, workshops and many more!
+                          </p>
+                        </div>
+                      </FeatureCard>
+                    </div>
+                  </div>
+                </section>
+              )}
+
+              {mode === 'job' && (
+                <FullSection>
+                  <BilingualJobForm />
+                </FullSection>
+              )}
+
+              {mode === 'chat' && (
+                <FullSection>
+                  <Chatbot />
+                </FullSection>
+              )}
+
+              <footer style={styles.footer}>
+                <div style={styles.footerContainer}>
+                  <div style={styles.footerTitle}>Meet the Team</div>
+                  <div style={styles.footerRow}>
+                    <div style={styles.footerMember}>
+                      <span style={styles.footerName}>Naser Diabat</span>
+                      <a href="https://www.linkedin.com/in/naser-diabat-b857232b9/" target="_blank" rel="noopener noreferrer" style={styles.footerLink}>LinkedIn</a>
+                    </div>
+                    <div style={styles.footerMember}>
+                      <span style={styles.footerName}>Eyad Naimi</span>
+                      <a href="https://www.linkedin.com/in/eyad-naimi-1401ba276/" target="_blank" rel="noopener noreferrer" style={styles.footerLink}>LinkedIn</a>
+                    </div>
+                    <div style={styles.footerMember}>
+                      <span style={styles.footerName}>Motasem Kassasbeh</span>
+                      <a href="https://www.linkedin.com/in/motasem-kassasbeh-120561272/" target="_blank" rel="noopener noreferrer" style={styles.footerLink}>LinkedIn</a>
+                    </div>
+                  </div>
+                </div>
+              </footer>
+            </main>
+          </div>
+        );
+      }
+
+      function FeatureCard({ title, children, onOpen, buttonText = 'Open' }) {
+        return (
+          <article
+            onClick={onOpen ? onOpen : undefined}
+            style={styles.cardGlass}
+            onMouseEnter={(e) => { e.currentTarget.style.transform = 'translateY(-2px)'; e.currentTarget.style.boxShadow = styles.shadowXL; }}
+            onMouseLeave={(e) => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = styles.shadowLG; }}
+          >
+            <div style={styles.cardAccent} aria-hidden="true"></div>
+            <h2 style={styles.cardTitle}>{title}</h2>
+            <div style={{ flexGrow: 1 }}>{children}</div>
+            <div style={styles.cardFooter}>
+              <button style={styles.btnPrimary} onClick={onOpen ? onOpen : undefined}>{buttonText}</button>
+            </div>
+          </article>
+        );
+      }
+
+      function FullSection({ children }) {
+        return (
+          <section style={styles.fullSection}>
+            <div style={{ ...styles.container, ...styles.fullWrap }}>
+              <div style={styles.fullCard}>{children}</div>
+            </div>
+          </section>
+        );
+      }
+
+      async function sendToN8n(msg, file, webhookUrl) {
+        const WEBHOOK_URL = webhookUrl;
+        let response;
+
+        if (msg && !file) {
+          const requestBody = JSON.stringify({ type: 'text', message: msg });
+          response = await fetch(WEBHOOK_URL, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: requestBody
+          });
+        } else if (file && !msg) {
+          const formData = new FormData();
+          formData.append('type', 'file');
+          formData.append('file', file, file.name);
+          response = await fetch(WEBHOOK_URL, { method: 'POST', body: formData });
+        } else {
+          return null;
+        }
+
+        return response;
+      }
+
+      function Chatbot() {
+        const STORAGE_KEY = 'chatbotMessages';
+
+        const initialMessages = () => {
+          try {
+            const saved = sessionStorage.getItem(STORAGE_KEY);
+            if (saved) return JSON.parse(saved);
+          } catch (e) {
+            console.error('Could not load messages from session:', e);
+          }
+          return [{ text: 'Hello! How can I help you today?', type: 'bot' }];
+        };
+
+        const [messages, setMessages] = useState(initialMessages);
+        const [input, setInput] = useState('');
+        const [loading, setLoading] = useState(false);
+
+        const [file, setFile] = useState(null);
+        const fileInputRef = useRef(null);
+
+        const endRef = useRef(null);
+        const didMountRef = useRef(false);
+
+        useEffect(() => {
+          try { sessionStorage.setItem(STORAGE_KEY, JSON.stringify(messages)); } catch (e) { console.error('Could not save messages to session:', e); }
+          if (!didMountRef.current) { didMountRef.current = true; return; }
+          endRef.current?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }, [messages]);
+
+        useEffect(() => {
+          const handleUnload = () => sessionStorage.removeItem(STORAGE_KEY);
+          window.addEventListener('unload', handleUnload);
+          return () => window.removeEventListener('unload', handleUnload);
+        }, []);
+
+        const handleFileChange = (e) => {
+          const selected = e.target.files && e.target.files[0];
+          if (!selected) { setFile(null); return; }
+          if (selected.type !== 'application/pdf' && !selected.name.toLowerCase().endsWith('.pdf')) {
+            alert('Only PDF files are allowed.');
+            e.target.value = null;
+            setFile(null);
+            return;
+          }
+          setFile(selected);
+          setInput('');
+        };
+
+        const sendMessage = async () => {
+          const msg = input.trim();
+          if (loading) return;
+          if ((!msg && !file) || (msg && file)) return;
+
+          let userMessage = file ? `[File Uploaded: ${file.name}]` : msg;
+          setMessages((p) => [...p, { text: userMessage, type: 'user' }]);
+          setInput('');
+          setFile(null);
+          if (fileInputRef.current) fileInputRef.current.value = null;
+
+          setLoading(true);
+          try {
+            const response = await sendToN8n(msg, file, CHATBOT_WEBHOOK_URL);
+            if (!response) throw new Error('No action taken');
+            if (!response.ok) throw new Error('HTTP ' + response.status);
+            const data = await response.json();
+            const reply = data.output || 'No reply received.';
+            setMessages((p) => [...p, { text: reply, type: 'bot' }]);
+          } catch (err) {
+            setMessages((p) => [...p, { text: 'Failed to send message/upload file.', type: 'error' }]);
+            setTimeout(() => setMessages((p) => p.filter((m) => m.type !== 'error')), 4000);
+          } finally {
+            setLoading(false);
+          }
+        };
+
+        const onKeyDown = (e) => {
+          if (e.key === 'Enter' && !e.shiftKey) {
+            e.preventDefault();
+            sendMessage();
+          }
+        };
+
+        return (
+          <div style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
+            <h2 style={{ ...styles.boxTitle, color: '#E63946', marginBottom: 12 }}>Chat Assistant</h2>
+
+            <div style={styles.chatMessagesFull}>
+              {messages.map((m, i) => (
+                <div
+                  key={i}
+                  style={{
+                    ...styles.chatMessage,
+                    ...(m.type === 'user'
+                      ? styles.chatMessageUser
+                      : m.type === 'error'
+                      ? styles.chatMessageError
+                      : styles.chatMessageBot)
+                  }}
+                >
+                  <div
+                    dangerouslySetInnerHTML={{
+                      __html: m.text
+                        .replace(/\n/g, '<br>')
+                        .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+                        .replace(/\*(.*?)\*/g, '<em>$1</em>')
+                        .replace(
+                          /(https?:\/\/[^\s]+)/g,
+                          '<a href="$1" target="_blank" rel="noopener noreferrer" style="color:#5B8DEF; text-decoration:underline;">$1</a>'
+                        )
+                    }}
+                  />
+                </div>
+              ))}
+              <div ref={endRef} />
+            </div>
+
+            <div style={styles.chatInputWrapper}>
+              <input
+                type="file"
+                ref={fileInputRef}
+                accept=".pdf,application/pdf"
+                onChange={handleFileChange}
+                style={{ display: 'none' }}
+              />
+
+              <button
+                type="button"
+                style={{
+                  ...styles.btnSend,
+                  marginRight: 8,
+                  width: 40,
+                  height: 40,
+                  backgroundImage: 'none',
+                  background: file ? (styles.colors?.primaryDark || '#B71C1C') : (styles.colors?.bg3 || '#3A3A3A'),
+                  transition: 'background-color 0.2s'
+                }}
+                onClick={() => fileInputRef.current?.click()}
+                disabled={loading || input.length > 0}
+                title="Upload PDF"
+              >
+                <span style={{ fontSize: '1.2rem', color: file ? '#fff' : '#aaa' }}>📎</span>
+              </button>
+
+              <textarea
+                style={styles.chatInput}
+                placeholder={file ? `File ready: ${file.name}` : 'Type your message...'}
+                value={input}
+                onChange={(e) => setInput(e.target.value)}
+                onKeyDown={onKeyDown}
+                rows={2}
+                disabled={loading || file !== null}
+              />
+
+              <button
+                type="button"
+                style={{ ...styles.btnSend, opacity: loading ? 0.5 : 1, cursor: loading ? 'not-allowed' : 'pointer' }}
+                onClick={sendMessage}
+                disabled={loading || (input.trim() === '' && file === null)}
+                title="Send"
+              >
+                {loading ? (
+                  <span style={styles.loadingDots}>
+                    <span style={styles.loadingDot}></span>
+                    <span style={{ ...styles.loadingDot, animationDelay: '-0.16s' }}></span>
+                    <span style={{ ...styles.loadingDot, animationDelay: '0s' }}></span>
+                  </span>
+                ) : (
+                  <span style={styles.sendIcon}>➤</span>
+                )}
+              </button>
+            </div>
+
+            {file && (
+              <div style={{ marginTop: 8, display: 'flex', alignItems: 'center', gap: 8 }}>
+                <div
+                  style={{
+                    background: '#2C2C2C',
+                    border: '1px solid rgba(255,255,255,0.1)',
+                    borderRadius: 10,
+                    padding: '6px 10px',
+                    fontSize: 13,
+                    color: '#F5F5F5'
+                  }}
+                >
+                  Selected: {file.name}
+                </div>
+                <button
+                  type="button"
+                  onClick={() => {
+                    setFile(null);
+                    if (fileInputRef.current) fileInputRef.current.value = null;
+                  }}
+                  style={{ border: 'none', background: 'transparent', color: '#E63946', fontWeight: 700, cursor: 'pointer' }}
+                  title="Remove"
+                >
+                  ×
+                </button>
+              </div>
+            )}
+          </div>
+        );
+      }
+
+      function BilingualJobForm() {
+        const { useState, useEffect } = React;
+        const STORAGE_KEY = 'jobFormData';
+
+        const getInitialData = () => {
+          try {
+            const saved = sessionStorage.getItem(STORAGE_KEY);
+            if (saved) return JSON.parse(saved);
+          } catch (e) {
+            console.error('Could not load job form data:', e);
+          }
+          return { name: '', jobPosition: '', interests: '', hardSkills: '', remoteWork: '', email: '' };
+        };
+
+        const [formData, setFormData] = useState(getInitialData);
+        const [isSubmitting, setIsSubmitting] = useState(false);
+        const [submitStatus, setSubmitStatus] = useState(null);
+
+        useEffect(() => {
+          try { sessionStorage.setItem(STORAGE_KEY, JSON.stringify(formData)); } catch (e) { console.error('Could not save job form data:', e); }
+        }, [formData]);
+
+        useEffect(() => {
+          const handleUnload = () => sessionStorage.removeItem(STORAGE_KEY);
+          window.addEventListener('unload', handleUnload);
+          return () => window.removeEventListener('unload', handleUnload);
+        }, []);
+
+        useEffect(() => {
+          document.documentElement.setAttribute('dir', 'ltr');
+          document.documentElement.lang = 'en';
+        }, []);
+
+        const t = {
+          title: 'Job Application Form',
+          subtitle: 'Please fill out the form below with the required information',
+          name: 'Name',
+          namePlaceholder: 'Enter your full name',
+          jobPosition: 'Please specify the job position or main field of work that interests you',
+          jobPositionPlaceholder: 'Example: Software Developer, Graphic Designer',
+          interests: 'Please specify your interests close to the job objective (Please mention at least 5 interests)',
+          interestsPlaceholder: 'Example: Programming, Design, Project Management, Digital Marketing, Data Analysis',
+          hardSkills: 'Please specify and write the most important hard skills that make you qualified for this position (Please mention at least 5 skills)',
+          hardSkillsPlaceholder: 'Example: JavaScript, React, Python, SQL, Adobe Photoshop',
+          remoteWork: 'Do you mind working remotely?',
+          remoteYes: 'I mind',
+          remoteNo: "I don't mind",
+          email: 'Please enter the email address we will contact you through',
+          emailPlaceholder: 'example@email.com',
+          submit: 'Submit Application',
+          sending: 'Sending...',
+          successMessage: '✓ Your application has been sent successfully!',
+          errorMessage: '✗ An error occurred. Please try again.',
+          required: '*'
+        };
+
+        const handleChange = (e) => {
+          const { name, value } = e.target;
+          const v = typeof value === 'string' ? value : '';
+          setFormData((prev) => ({ ...prev, [name]: v }));
+        };
+
+        const handleSubmit = async (e) => {
+          e.preventDefault();
+          if (isSubmitting) return;
+          setIsSubmitting(true);
+          setSubmitStatus(null);
+
+          try {
+            const payload = {
+              ...formData,
+              name: formData.name.trim(),
+              jobPosition: formData.jobPosition.trim(),
+              interests: formData.interests.trim(),
+              hardSkills: formData.hardSkills.trim(),
+              email: formData.email.trim(),
+              timestamp: new Date().toISOString(),
+              language: 'en'
+            };
+
+            const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbziYDwfxpiKEq5Wir8tvmt-jhKN-uAnn-k6WMF2ItSJmUFlqs8ueaS7cM2L6FFD4fdA/exec';
+
+            await fetch(GOOGLE_SCRIPT_URL, {
+              method: 'POST',
+              mode: 'no-cors',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(payload)
+            });
+
+            setSubmitStatus('success');
+            const empty = { name: '', jobPosition: '', interests: '', hardSkills: '', remoteWork: '', email: '' };
+            setFormData(empty);
+            sessionStorage.setItem(STORAGE_KEY, JSON.stringify(empty));
+          } catch (err) {
+            console.error('Submission error:', err);
+            setSubmitStatus('error');
+          } finally {
+            setIsSubmitting(false);
+          }
+        };
+
+        return (
+          <div className="min-h-[60vh] py-6 px-4 sm:px-6 lg:px-8">
+            <div className="max-w-3xl mx-auto text-gray-100">
+              <div className="mb-8 text-left">
+                <h2 className="text-4xl font-extrabold bg-gradient-to-r from-red-500 to-red-700 bg-clip-text text-transparent mb-3">
+                  {t.title}
+                </h2>
+                <p className="text-gray-300">{t.subtitle}</p>
+              </div>
+
+              <form className="space-y-6" onSubmit={handleSubmit}>
+                <div>
+                  <label htmlFor="name" className="block text-sm font-medium text-gray-200 mb-2">
+                    {t.name} <span className="text-red-500">{t.required}</span>
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    required
+                    className="w-full px-4 py-3 rounded-xl border border-white/10 bg-neutral-800/70 text-gray-100 placeholder-gray-400 focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all outline-none"
+                    placeholder={t.namePlaceholder}
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="jobPosition" className="block text-sm font-medium text-gray-200 mb-2">
+                    {t.jobPosition} <span className="text-red-500">{t.required}</span>
+                  </label>
+                  <input
+                    type="text"
+                    id="jobPosition"
+                    name="jobPosition"
+                    value={formData.jobPosition}
+                    onChange={handleChange}
+                    required
+                    className="w-full px-4 py-3 rounded-xl border border-white/10 bg-neutral-800/70 text-gray-100 placeholder-gray-400 focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all outline-none"
+                    placeholder={t.jobPositionPlaceholder}
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="interests" className="block text-sm font-medium text-gray-200 mb-2">
+                    {t.interests} <span className="text-red-500">{t.required}</span>
+                  </label>
+                  <textarea
+                    id="interests"
+                    name="interests"
+                    value={formData.interests}
+                    onChange={handleChange}
+                    required
+                    rows="4"
+                    className="w-full px-4 py-3 rounded-xl border border-white/10 bg-neutral-800/70 text-gray-100 placeholder-gray-400 focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all outline-none resize-none"
+                    placeholder={t.interestsPlaceholder}
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="hardSkills" className="block text-sm font-medium text-gray-200 mb-2">
+                    {t.hardSkills} <span className="text-red-500">{t.required}</span>
+                  </label>
+                  <textarea
+                    id="hardSkills"
+                    name="hardSkills"
+                    value={formData.hardSkills}
+                    onChange={handleChange}
+                    required
+                    rows="4"
+                    className="w-full px-4 py-3 rounded-xl border border-white/10 bg-neutral-800/70 text-gray-100 placeholder-gray-400 focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all outline-none resize-none"
+                    placeholder={t.hardSkillsPlaceholder}
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-gray-200 mb-3">
+                    {t.remoteWork} <span className="text-red-500">{t.required}</span>
+                  </label>
+                  <div className="flex gap-4">
+                    <label className="flex items-center gap-2 cursor-pointer">
+                      <input
+                        type="radio"
+                        name="remoteWork"
+                        value="mind"
+                        checked={formData.remoteWork === 'mind'}
+                        onChange={handleChange}
+                        required
+                        className="w-5 h-5 text-red-500 focus:ring-2 focus:ring-red-500"
+                      />
+                      <span className="text-gray-200">{t.remoteYes}</span>
+                    </label>
+                    <label className="flex items-center gap-2 cursor-pointer">
+                      <input
+                        type="radio"
+                        name="remoteWork"
+                        value="no_mind"
+                        checked={formData.remoteWork === 'no_mind'}
+                        onChange={handleChange}
+                        required
+                        className="w-5 h-5 text-red-500 focus:ring-2 focus:ring-red-500"
+                      />
+                      <span className="text-gray-200">{t.remoteNo}</span>
+                    </label>
+                  </div>
+                </div>
+
+                <div>
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-200 mb-2">
+                    {t.email} <span className="text-red-500">{t.required}</span>
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                    className="w-full px-4 py-3 rounded-xl border border-white/10 bg-neutral-800/70 text-gray-100 placeholder-gray-400 focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all outline-none"
+                    placeholder={t.emailPlaceholder}
+                  />
+                </div>
+
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="w-full bg-gradient-to-r from-red-600 to-red-800 text-white font-semibold py-4 rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all disabled:opacity-50"
+                >
+                  {isSubmitting ? (
+                    <span className="flex items-center justify-center">
+                      <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                      </svg>
+                      {t.sending}
+                    </span>
+                  ) : t.submit}
+                </button>
+
+                {submitStatus === 'success' && (
+                  <div className="p-4 rounded-xl bg-emerald-600/15 border border-emerald-500/30">
+                    <p className="text-emerald-300 text-center font-medium">{t.successMessage}</p>
+                  </div>
+                )}
+                {submitStatus === 'error' && (
+                  <div className="p-4 rounded-xl bg-red-600/15 border border-red-500/30">
+                    <p className="text-red-300 text-center font-medium">{t.errorMessage}</p>
+                  </div>
+                )}
+              </form>
+            </div>
+          </div>
+        );
+      }
+
+      const styles = {
+        colors: {
+          bg1: '#1F1F1F',
+          bg2: '#2C2C2C',
+          bg3: '#3A3A3A',
+          text: '#F5F5F5',
+          primary: '#E63946',
+          primaryDark: '#B71C1C',
+          glassBorder: 'rgba(255,255,255,0.1)',
+          glassBG: 'rgba(44,44,44,0.9)'
+        },
+
+        shadowLG: '0 10px 25px rgba(0,0,0,0.25)',
+        shadowXL: '0 20px 45px rgba(0,0,0,0.4)',
+
+        body: {
+          fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
+          background: 'linear-gradient(135deg, #1F1F1F 0%, #2C2C2C 100%)',
+          minHeight: '100vh',
+          margin: 0,
+          paddingBottom: '80px',
+          color: '#F5F5F5',
+          lineHeight: 1.6
+        },
+
+        container: { maxWidth: '1200px', margin: '0 auto', padding: '0 20px' },
+        header: { padding: '20px 0' },
+        headerRow: { display: 'flex', alignItems: 'center', justifyContent: 'flex-start', gap: '16px' },
+
+        siteTitle: { fontSize: '1.9rem', fontWeight: 800, margin: 0, color: '#E63946' },
+
+        btnHeader: {
+          border: 'none',
+          padding: '10px 18px',
+          borderRadius: '12px',
+          fontWeight: 700,
+          cursor: 'pointer',
+          background: '#E63946',
+          color: '#fff',
+          boxShadow: '0 4px 16px rgba(230,57,70,0.3)',
+          transition: 'transform 160ms ease'
+        },
+
+        features: { padding: '40px 0' },
+        featuresRow: { display: 'flex', gap: '24px', alignItems: 'stretch', justifyContent: 'center' },
+
+        cardGlass: {
+          flex: 1,
+          position: 'relative',
+          borderRadius: '20px',
+          background: 'rgba(44,44,44,0.95)',
+          border: '1px solid rgba(255,255,255,0.1)',
+          backdropFilter: 'blur(10px)',
+          WebkitBackdropFilter: 'blur(10px)',
+          padding: '28px',
+          minHeight: '420px',
+          cursor: 'pointer',
+          boxShadow: '0 10px 25px rgba(0,0,0,0.25)',
+          transition: 'box-shadow 180ms ease, transform 180ms ease',
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'space-between',
+          overflow: 'hidden'
+        },
+
+        cardAccent: {
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          right: 0,
+          height: '4px',
+          backgroundImage: 'linear-gradient(90deg, #E63946, #B71C1C)'
+        },
+
+        cardTitle: {
+          fontSize: '1.5rem',
+          fontWeight: 800,
+          marginTop: '8px',
+          marginBottom: '12px',
+          color: '#E63946'
+        },
+
+        boxText: { fontSize: '1rem', marginBottom: '20px', color: '#F5F5F5' },
+
+        btnPrimary: {
+          backgroundImage: 'linear-gradient(90deg, #E63946, #B71C1C)',
+          color: '#fff',
+          padding: '14px 24px',
+          border: 'none',
+          borderRadius: '12px',
+          fontWeight: 700,
+          cursor: 'pointer',
+          width: '100%',
+          boxShadow: '0 10px 24px rgba(230,57,70,0.25)',
+          transition: 'transform 160ms ease, box-shadow 160ms ease'
+        },
+
+        fullSection: { padding: '16px 0' },
+        fullWrap: { minHeight: 'calc(100vh - 84px)' },
+        fullCard: {
+          borderRadius: '28px',
+          background: 'rgba(44,44,44,0.95)',
+          border: '1px solid rgba(255,255,255,0.1)',
+          backdropFilter: 'blur(10px)',
+          WebkitBackdropFilter: 'blur(10px)',
+          padding: '24px',
+          minHeight: '100%',
+          color: '#F5F5F5'
+        },
+
+        chatMessagesFull: {
+          flex: 1,
+          overflowY: 'auto',
+          background: 'rgba(44,44,44,0.65)',
+          border: '1px solid rgba(255,255,255,0.10)',
+          borderRadius: '16px',
+          padding: '16px',
+          display: 'flex',
+          flexDirection: 'column',
+          gap: '12px',
+          color: '#F5F5F5'
+        },
+        chatMessage: {
+          padding: '10px 14px',
+          borderRadius: '12px',
+          maxWidth: '85%',
+          wordWrap: 'break-word'
+        },
+        chatMessageUser: {
+          background: '#B71C1C',
+          color: '#fff',
+          alignSelf: 'flex-end',
+          textAlign: 'right'
+        },
+        chatMessageBot: {
+          alignSelf: 'flex-start',
+          background: '#2B2B2B',
+          color: '#F5F5F5',
+          padding: '12px 16px',
+          borderRadius: '14px',
+          maxWidth: '90%',
+          lineHeight: 1.6,
+          fontSize: '15px',
+          whiteSpace: 'pre-wrap',
+          wordBreak: 'break-word',
+          boxShadow: '0 2px 8px rgba(0,0,0,0.2)'
+        },
+        chatMessageError: {
+          background: '#7F1D1D',
+          color: '#FFE5E5',
+          alignSelf: 'center',
+          textAlign: 'center',
+          fontSize: '.9rem'
+        },
+        chatInputWrapper: {
+          display: 'flex',
+          gap: '10px',
+          alignItems: 'flex-end',
+          marginTop: '12px'
+        },
+        chatInput: {
+          flex: 1,
+          padding: '12px 14px',
+          border: '1px solid rgba(255,255,255,0.10)',
+          borderRadius: '12px',
+          fontSize: '.95rem',
+          fontFamily: 'inherit',
+          background: '#1F1F1F',
+          color: '#F5F5F5',
+          resize: 'none',
+          minHeight: '44px'
+        },
+        btnSend: {
+          width: '44px',
+          height: '44px',
+          borderRadius: '12px',
+          border: 'none',
+          backgroundImage: 'linear-gradient(90deg, #E63946, #B71C1C)',
+          color: '#fff',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          boxShadow: '0 10px 24px rgba(230,57,70,0.25)',
+          cursor: 'pointer',
+          transition: 'transform 160ms ease, box-shadow 160ms ease'
+        },
+        sendIcon: { fontSize: '1.2rem' },
+        loadingDots: { display: 'flex', gap: '4px' },
+        loadingDot: {
+          width: '6px',
+          height: '6px',
+          borderRadius: '50%',
+          background: '#fff',
+          animation: 'bounce 1.4s infinite ease-in-out both',
+          animationDelay: '-0.32s'
+        },
+
+        footer: {
+          backgroundColor: '#2C2C2C',
+          borderTop: '1px solid rgba(255,255,255,0.1)',
+          color: '#F5F5F5',
+          padding: '24px 0',
+          textAlign: 'center',
+          marginTop: '40px'
+        },
+        footerContainer: { maxWidth: '1000px', margin: '0 auto', padding: '0 16px' },
+        footerTitle: { fontSize: '1.3rem', fontWeight: 700, color: '#E63946', marginBottom: '16px' },
+        footerRow: { display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '40px', flexWrap: 'wrap' },
+        footerMember: { display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '6px' },
+        footerName: { fontWeight: 600, color: '#F5F5F5' },
+        footerLink: { color: '#E63946', textDecoration: 'none', fontWeight: 500, transition: 'color 0.2s ease' }
+      };
+
+      (function () {
+        const s = document.createElement('style');
+        s.textContent = `@keyframes bounce { 0%,80%,100%{transform:scale(0)} 40%{transform:scale(1)} }`;
+        document.head.appendChild(s);
+      })();
+
+      const root = ReactDOM.createRoot(document.getElementById('root'));
+      root.render(<App />);
+    </script>
+  </body>
+</html>

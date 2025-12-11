@@ -124,7 +124,7 @@
       "name": "Feedback& Tips Agent",
       "credentials": {
         "perplexityApi": {
-          "id": "2c7LeNd5bGP2ds8w",
+          "id": "",
           "name": "Perplexity account"
         }
       }
@@ -178,7 +178,7 @@
       "name": "Google Gemini Chat Model",
       "credentials": {
         "googlePalmApi": {
-          "id": "juoM7Nz6LxBrE2IL",
+          "id": "",
           "name": "Google Gemini(PaLM) Api account"
         }
       }
@@ -213,7 +213,7 @@
       "name": "Scoring Agent",
       "credentials": {
         "perplexityApi": {
-          "id": "2c7LeNd5bGP2ds8w",
+          "id": "",
           "name": "Perplexity account"
         }
       }
@@ -244,7 +244,7 @@
       "name": "Raw To JSON Convertor Agent",
       "credentials": {
         "perplexityApi": {
-          "id": "2c7LeNd5bGP2ds8w",
+          "id": "",
           "name": "Perplexity account"
         }
       }
@@ -275,7 +275,7 @@
       "name": "JSON To Human Convertor Agent",
       "credentials": {
         "perplexityApi": {
-          "id": "2c7LeNd5bGP2ds8w",
+          "id": "",
           "name": "Perplexity account"
         }
       }
@@ -389,7 +389,7 @@
       "name": "Resume Wisdom Agent",
       "credentials": {
         "perplexityApi": {
-          "id": "2c7LeNd5bGP2ds8w",
+          "id": "",
           "name": "Perplexity account"
         }
       }
@@ -420,7 +420,7 @@
       "name": "LinkedIn Wisdom Agent",
       "credentials": {
         "perplexityApi": {
-          "id": "2c7LeNd5bGP2ds8w",
+          "id": "",
           "name": "Perplexity account"
         }
       }
@@ -451,7 +451,7 @@
       "name": "Interview Wisdom Agent",
       "credentials": {
         "perplexityApi": {
-          "id": "2c7LeNd5bGP2ds8w",
+          "id": "",
           "name": "Perplexity account"
         }
       }
@@ -621,7 +621,7 @@
       "name": "Message a model",
       "credentials": {
         "perplexityApi": {
-          "id": "2c7LeNd5bGP2ds8w",
+          "id": "",
           "name": "Perplexity account"
         }
       }
@@ -655,7 +655,7 @@
       "name": "Message a model1",
       "credentials": {
         "perplexityApi": {
-          "id": "2c7LeNd5bGP2ds8w",
+          "id": "",
           "name": "Perplexity account"
         }
       }
@@ -730,7 +730,7 @@
       "name": "Cohere Chat Model",
       "credentials": {
         "cohereApi": {
-          "id": "gSZIqkFW65PSazDh",
+          "id": "",
           "name": "CohereApi account"
         }
       }
@@ -768,7 +768,7 @@
       "name": "Cohere Chat Model1",
       "credentials": {
         "cohereApi": {
-          "id": "gSZIqkFW65PSazDh",
+          "id": "",
           "name": "CohereApi account"
         }
       }

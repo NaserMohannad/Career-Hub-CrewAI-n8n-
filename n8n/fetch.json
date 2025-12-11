@@ -4,7 +4,7 @@
     {
       "parameters": {
         "method": "POST",
-        "url": "https://api.apify.com/v2/acts/apify~instagram-post-scraper/run-sync-get-dataset-items?token=apify_api_qr6Omnms4Pf91mLKRy0MkUEskJjDJf0Pt9cr",
+        "url": "https://api.apify.com/v2/acts/apify~instagram-post-scraper/run-sync-get-dataset-items?token=",
         "sendBody": true,
         "specifyBody": "json",
         "jsonBody": "{\n    \"onlyPostsNewerThan\": \"1 days\",\n    \"resultsLimit\": 10,\n    \"skipPinnedPosts\": false,\n    \"username\": [\n        \"modeejo\"\n    ]\n}",
@@ -22,7 +22,7 @@
     {
       "parameters": {
         "method": "POST",
-        "url": "https://api.apify.com/v2/acts/apify~instagram-post-scraper/run-sync-get-dataset-items?token=apify_api_qr6Omnms4Pf91mLKRy0MkUEskJjDJf0Pt9cr",
+        "url": "https://api.apify.com/v2/acts/apify~instagram-post-scraper/run-sync-get-dataset-items?token=",
         "sendBody": true,
         "specifyBody": "json",
         "jsonBody": "{\n    \"onlyPostsNewerThan\": \"1 days\",\n    \"resultsLimit\":10,\n    \"skipPinnedPosts\": false,\n    \"username\": [\n        \"cpfjo\"\n    ]\n}",
@@ -40,7 +40,7 @@
     {
       "parameters": {
         "method": "POST",
-        "url": "https://api.apify.com/v2/acts/apify~instagram-post-scraper/run-sync-get-dataset-items?token=apify_api_qr6Omnms4Pf91mLKRy0MkUEskJjDJf0Pt9cr",
+        "url": "https://api.apify.com/v2/acts/apify~instagram-post-scraper/run-sync-get-dataset-items?token=",
         "sendBody": true,
         "specifyBody": "json",
         "jsonBody": "{\n    \"onlyPostsNewerThan\": \"1 days\",\n    \"resultsLimit\": 10,\n    \"skipPinnedPosts\": false,\n    \"username\": [\n        \"qafzafortech\"\n    ]\n}",
@@ -58,7 +58,7 @@
     {
       "parameters": {
         "method": "POST",
-        "url": "https://api.apify.com/v2/acts/apimaestro~linkedin-profile-posts/run-sync-get-dataset-items?token=apify_api_qr6Omnms4Pf91mLKRy0MkUEskJjDJf0Pt9cr",
+        "url": "https://api.apify.com/v2/acts/apimaestro~linkedin-profile-posts/run-sync-get-dataset-items?token=",
         "sendBody": true,
         "specifyBody": "json",
         "jsonBody": "{\n    \"page_number\": 1,\n    \"limit\": 3,\n    \"username\": \"https://www.linkedin.com/in/abdullah-elyyan/\"\n}",
@@ -76,7 +76,7 @@
     {
       "parameters": {
         "method": "POST",
-        "url": "https://api.apify.com/v2/acts/apify~instagram-post-scraper/run-sync-get-dataset-items?token=apify_api_qr6Omnms4Pf91mLKRy0MkUEskJjDJf0Pt9cr",
+        "url": "https://api.apify.com/v2/acts/apify~instagram-post-scraper/run-sync-get-dataset-items?token=",
         "sendBody": true,
         "specifyBody": "json",
         "jsonBody": "{\n    \"onlyPostsNewerThan\": \"1 days\",\n    \"resultsLimit\": 10,\n    \"skipPinnedPosts\": false,\n    \"username\": [\n        \"ytj.jordan\"\n    ]\n}",
@@ -94,7 +94,7 @@
     {
       "parameters": {
         "method": "POST",
-        "url": "https://api.apify.com/v2/acts/apimaestro~linkedin-profile-posts/run-sync-get-dataset-items?token=apify_api_qr6Omnms4Pf91mLKRy0MkUEskJjDJf0Pt9cr",
+        "url": "https://api.apify.com/v2/acts/apimaestro~linkedin-profile-posts/run-sync-get-dataset-items?token=",
         "sendBody": true,
         "specifyBody": "json",
         "jsonBody": "{\n    \"page_number\": 1,\n    \"limit\": 10,\n    \"username\": \"https://www.linkedin.com/in/eng-ahmad-suwaileh-%D9%85-%D8%A7%D8%AD%D9%85%D8%AF-%D8%B5%D9%88%D9%8A%D9%84%D8%AD-81634025/\"\n}",
@@ -167,7 +167,7 @@
     {
       "parameters": {
         "method": "POST",
-        "url": "https://api.apify.com/v2/acts/apify~instagram-post-scraper/run-sync-get-dataset-items?token=apify_api_qr6Omnms4Pf91mLKRy0MkUEskJjDJf0Pt9cr",
+        "url": "https://api.apify.com/v2/acts/apify~instagram-post-scraper/run-sync-get-dataset-items?token=",
         "sendBody": true,
         "specifyBody": "json",
         "jsonBody": "{\n    \"onlyPostsNewerThan\": \"1 days\",\n    \"resultsLimit\": 10,\n    \"skipPinnedPosts\": false,\n    \"username\": [\n        \"ieeettu\"\n    ]\n}",
@@ -630,7 +630,7 @@
       "name": "Message a model",
       "credentials": {
         "perplexityApi": {
-          "id": "2c7LeNd5bGP2ds8w",
+          "id": "",
           "name": "Perplexity account"
         }
       }
@@ -664,7 +664,7 @@
       "name": "Message a model1",
       "credentials": {
         "perplexityApi": {
-          "id": "2c7LeNd5bGP2ds8w",
+          "id": "",
           "name": "Perplexity account"
         }
       }
@@ -747,7 +747,7 @@
       "name": "Message a model2",
       "credentials": {
         "perplexityApi": {
-          "id": "2c7LeNd5bGP2ds8w",
+          "id": "",
           "name": "Perplexity account"
         }
       }
@@ -892,7 +892,7 @@
       "name": "Append or update row in sheet",
       "credentials": {
         "googleSheetsOAuth2Api": {
-          "id": "wQdA4VWngt0fTE7e",
+          "id": "",
           "name": "Google Sheets account"
         }
       }
@@ -975,7 +975,7 @@
       "name": "Message a model3",
       "credentials": {
         "perplexityApi": {
-          "id": "2c7LeNd5bGP2ds8w",
+          "id": "",
           "name": "Perplexity account"
         }
       }
@@ -1065,7 +1065,7 @@
       "name": "Message a model4",
       "credentials": {
         "perplexityApi": {
-          "id": "2c7LeNd5bGP2ds8w",
+          "id": "",
           "name": "Perplexity account"
         }
       }
@@ -1148,7 +1148,7 @@
       "name": "Message a model5",
       "credentials": {
         "perplexityApi": {
-          "id": "2c7LeNd5bGP2ds8w",
+          "id": "",
           "name": "Perplexity account"
         }
       }
@@ -1311,7 +1311,7 @@
       "name": "Append or update row in sheet2",
       "credentials": {
         "googleSheetsOAuth2Api": {
-          "id": "wQdA4VWngt0fTE7e",
+          "id": "",
           "name": "Google Sheets account"
         }
       }
@@ -1345,7 +1345,7 @@
       "name": "Message a model6",
       "credentials": {
         "perplexityApi": {
-          "id": "2c7LeNd5bGP2ds8w",
+          "id": "",
           "name": "Perplexity account"
         }
       }
@@ -1428,7 +1428,7 @@
       "name": "Message a model7",
       "credentials": {
         "perplexityApi": {
-          "id": "2c7LeNd5bGP2ds8w",
+          "id": "",
           "name": "Perplexity account"
         }
       }
@@ -1524,7 +1524,7 @@
       "name": "Message a model8",
       "credentials": {
         "perplexityApi": {
-          "id": "2c7LeNd5bGP2ds8w",
+          "id": "",
           "name": "Perplexity account"
         }
       }
@@ -1607,7 +1607,7 @@
       "name": "Message a model9",
       "credentials": {
         "perplexityApi": {
-          "id": "2c7LeNd5bGP2ds8w",
+          "id": "",
           "name": "Perplexity account"
         }
       }
@@ -1703,7 +1703,7 @@
       "name": "Message a model10",
       "credentials": {
         "perplexityApi": {
-          "id": "2c7LeNd5bGP2ds8w",
+          "id": "",
           "name": "Perplexity account"
         }
       }
@@ -1786,7 +1786,7 @@
       "name": "Message a model11",
       "credentials": {
         "perplexityApi": {
-          "id": "2c7LeNd5bGP2ds8w",
+          "id": "",
           "name": "Perplexity account"
         }
       }
@@ -1882,7 +1882,7 @@
       "name": "Message a model12",
       "credentials": {
         "perplexityApi": {
-          "id": "2c7LeNd5bGP2ds8w",
+          "id": "",
           "name": "Perplexity account"
         }
       }
@@ -1965,7 +1965,7 @@
       "name": "Message a model13",
       "credentials": {
         "perplexityApi": {
-          "id": "2c7LeNd5bGP2ds8w",
+          "id": "",
           "name": "Perplexity account"
         }
       }
@@ -2298,7 +2298,7 @@
       "name": "Message a model14",
       "credentials": {
         "perplexityApi": {
-          "id": "2c7LeNd5bGP2ds8w",
+          "id": "",
           "name": "Perplexity account"
         }
       }
@@ -2381,7 +2381,7 @@
       "name": "Message a model15",
       "credentials": {
         "perplexityApi": {
-          "id": "2c7LeNd5bGP2ds8w",
+          "id": "",
           "name": "Perplexity account"
         }
       }
@@ -2477,7 +2477,7 @@
     {
       "parameters": {
         "method": "POST",
-        "url": "https://api.apify.com/v2/acts/apify~instagram-post-scraper/run-sync-get-dataset-items?token=apify_api_qr6Omnms4Pf91mLKRy0MkUEskJjDJf0Pt9cr",
+        "url": "https://api.apify.com/v2/acts/apify~instagram-post-scraper/run-sync-get-dataset-items?token=",
         "sendBody": true,
         "specifyBody": "json",
         "jsonBody": "{\n    \"onlyPostsNewerThan\": \"1 days\",\n    \"resultsLimit\": 10,\n    \"skipPinnedPosts\": false,\n    \"username\": [\n        \"digiskillsjo\"\n    ]\n}",
@@ -2607,7 +2607,7 @@
       "name": "Append or update row in sheet7",
       "credentials": {
         "googleSheetsOAuth2Api": {
-          "id": "wQdA4VWngt0fTE7e",
+          "id": "",
           "name": "Google Sheets account"
         }
       }
@@ -2708,7 +2708,7 @@
       "name": "Append or update row in sheet3",
       "credentials": {
         "googleSheetsOAuth2Api": {
-          "id": "wQdA4VWngt0fTE7e",
+          "id": "",
           "name": "Google Sheets account"
         }
       }
@@ -2809,7 +2809,7 @@
       "name": "Append or update row in sheet4",
       "credentials": {
         "googleSheetsOAuth2Api": {
-          "id": "wQdA4VWngt0fTE7e",
+          "id": "",
           "name": "Google Sheets account"
         }
       }
@@ -2910,7 +2910,7 @@
       "name": "Append or update row in sheet5",
       "credentials": {
         "googleSheetsOAuth2Api": {
-          "id": "wQdA4VWngt0fTE7e",
+          "id": "",
           "name": "Google Sheets account"
         }
       }
@@ -3011,7 +3011,7 @@
       "name": "Append or update row in sheet6",
       "credentials": {
         "googleSheetsOAuth2Api": {
-          "id": "wQdA4VWngt0fTE7e",
+          "id": "",
           "name": "Google Sheets account"
         }
       }
@@ -3100,7 +3100,7 @@
       "name": "Append or update row in sheet1",
       "credentials": {
         "googleSheetsOAuth2Api": {
-          "id": "wQdA4VWngt0fTE7e",
+          "id": "",
           "name": "Google Sheets account"
         }
       }

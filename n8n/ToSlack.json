@@ -48,7 +48,7 @@
       "name": "Insta",
       "credentials": {
         "googleSheetsOAuth2Api": {
-          "id": "wQdA4VWngt0fTE7e",
+          "id": "",
           "name": "Google Sheets account"
         }
       }
@@ -81,7 +81,7 @@
       "name": "LinkedIn",
       "credentials": {
         "googleSheetsOAuth2Api": {
-          "id": "wQdA4VWngt0fTE7e",
+          "id": "",
           "name": "Google Sheets account"
         }
       }
@@ -138,7 +138,7 @@
       "webhookId": "d863c4b4-ebe9-4bcc-b0a6-b264daa8a4f5",
       "credentials": {
         "slackOAuth2Api": {
-          "id": "0O9hJgisqn3ZyUtY",
+          "id": "",
           "name": "Slack account"
         }
       }
@@ -169,7 +169,7 @@
       "webhookId": "d863c4b4-ebe9-4bcc-b0a6-b264daa8a4f5",
       "credentials": {
         "slackOAuth2Api": {
-          "id": "0O9hJgisqn3ZyUtY",
+          "id": "",
           "name": "Slack account"
         }
       }
@@ -267,7 +267,7 @@
       "name": "Append or update row in sheet",
       "credentials": {
         "googleSheetsOAuth2Api": {
-          "id": "wQdA4VWngt0fTE7e",
+          "id": "",
           "name": "Google Sheets account"
         }
       }
@@ -444,7 +444,7 @@
       "name": "Append or update row in sheet1",
       "credentials": {
         "googleSheetsOAuth2Api": {
-          "id": "wQdA4VWngt0fTE7e",
+          "id": "",
           "name": "Google Sheets account"
         }
       }

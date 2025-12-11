@@ -37,7 +37,7 @@
       "name": "Get row(s) in sheet",
       "credentials": {
         "googleSheetsOAuth2Api": {
-          "id": "wQdA4VWngt0fTE7e",
+          "id": "",
           "name": "Google Sheets account"
         }
       }
@@ -100,7 +100,7 @@
       "webhookId": "d80c2ebc-bc6f-4ce6-b2f4-2abde6f61284",
       "credentials": {
         "gmailOAuth2": {
-          "id": "jMzpDZ0pkIbUpOG4",
+          "id": "",
           "name": "Gmail account"
         }
       }

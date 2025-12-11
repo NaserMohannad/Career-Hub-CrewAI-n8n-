@@ -29,7 +29,7 @@
       "name": "Get row(s) in sheet",
       "credentials": {
         "googleSheetsOAuth2Api": {
-          "id": "wQdA4VWngt0fTE7e",
+          "id": "",
           "name": "Google Sheets account"
         }
       }
@@ -235,7 +235,7 @@
       "name": "Skills Validation",
       "credentials": {
         "perplexityApi": {
-          "id": "2c7LeNd5bGP2ds8w",
+          "id": "",
           "name": "Perplexity account"
         }
       }
@@ -269,7 +269,7 @@
       "name": "Interests Validation",
       "credentials": {
         "perplexityApi": {
-          "id": "2c7LeNd5bGP2ds8w",
+          "id": "",
           "name": "Perplexity account"
         }
       }
@@ -374,7 +374,7 @@
       "name": "Append or update row in sheet",
       "credentials": {
         "googleSheetsOAuth2Api": {
-          "id": "wQdA4VWngt0fTE7e",
+          "id": "",
           "name": "Google Sheets account"
         }
       }
